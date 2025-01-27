@@ -17,8 +17,8 @@
 </head>
 
 <body>
-    <div id="popup" class="modal">
-        <div class="modal-content container">
+    <div id="popup" class="modal overflow-hidden" style="z-index: 999999999;">
+        <div class="modal-content container rounded-0 overflow-hidden">
             <span id="close" class="close" onclick="hideModal()">&times;</span>
             <!-- Login Form -->
             <div id="loginForm">
@@ -43,14 +43,11 @@
                         <button class="btn btn-outline-dark rounded-0 d-flex align-items-center justify-content-center">
                             <a href="#" class="text-decoration-none text-dark"><i class="fab fa-google"></i> Login With Google</a>
                         </button>
-                        <button class="btn btn-outline-dark rounded-0 d-flex align-items-center justify-content-center">
-                            <a href="#" class="text-decoration-none text-dark"><i class="fab fa-facebook"></i> Login with Facebook</a>
-                        </button>
                     </div>
                     <button type="submit" class="btn btn-dark w-100 rounded-0">Login</button>
                 </form>
                 <p class="text-center mt-3">
-                    Belum punya akun? <span class="switch-btn" onclick="showRegister()">Register</span>
+                    Belum punya akun? <span class="switch-btn text-danger" onclick="showRegister()">Register</span>
                 </p>
             </div>
     
@@ -73,7 +70,7 @@
                     <button type="submit" class="btn btn-dark w-100 rounded-0">Register</button>
                 </form>
                 <p class="text-center mt-3">
-                    Sudah punya akun? <span class="switch-btn" onclick="showLogin()">Login</span>
+                    Sudah punya akun? <span class="switch-btn text-danger" onclick="showLogin()">Login</span>
                 </p>
             </div>
         </div>
