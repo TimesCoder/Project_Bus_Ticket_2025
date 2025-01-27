@@ -86,7 +86,7 @@
     
             <div class="row">
                 <!-- Gambar Bus dan Informasi Dasar -->
-                <div class="col-lg-4 col-md-6 col-12">
+                <div class="col-lg-4 col-md-6 col-12" data-aos="fade-right">
                     <div class="bus-card border shadow-sm p-3 mb-4">
                         <!-- Nama Bus -->
                         <div class="bus-name mb-3 text-center">
@@ -111,6 +111,10 @@
                                 <strong>Harga:</strong> Rp 1.350.000 per tiket
                             </p>
                         </div>
+
+
+
+
                         <!-- Tombol -->
                         <button class="btn btn-primary w-100 rounded-0" style="font-size: 1.2rem;">
                             <i class="fas fa-ticket-alt me-2"></i> Pesan Sekarang
@@ -121,7 +125,8 @@
     
                 <!-- Detail Bus -->
                 <div class="col-lg-8 col-md-8 col-12">
-                    <div class="rute">
+                    <div class="rute " data-aos="fade-left" data-aos-duration="1000"
+                    data-aos-delay="200">
                         <h2 class="product-name">
                             <i class="fas fa-map"></i> Rute Super Executive 2-1
                         </h2>
@@ -161,7 +166,8 @@
                         </div>
                     </div>
                     
-                    <div class="lokasi">
+                    <div class="lokasi" data-aos="fade-left" data-aos-duration="1000"
+                    data-aos-delay="400">
                         <h2 class="product-name">
                             <i class="fas fa-clock"></i> Waktu
                         </h2>
@@ -188,8 +194,12 @@
                     
                     <div class="product-detail">
                         <!-- Gambaran Umum -->
-                        <h2 class="product-name"><i class="fas fa-info-circle"></i> Gambaran Umum</h2>
-                        <div class="row mb-4">
+                        <h2 class="product-name" data-aos="fade-left" data-aos-duration="1000"
+                        data-aos-delay="600">
+                            <i class="fas fa-info-circle"></i> Gambaran Umum
+                        </h2>
+                        <div class="row mb-4" data-aos="fade-left" data-aos-duration="1000"
+                        data-aos-delay="800">
                             <div class="col-md-4 col-12">
                                 <img src="assets/details_gambar/gambar5.jpg" class="img-fluid" alt="Gambar Bus">
                             </div>
@@ -200,7 +210,7 @@
                                 <img src="assets/details_gambar/gambar5.jpg" class="img-fluid" alt="Gambar Bus">
                             </div>
                         </div>
-                        <div class="product-short-desc">
+                        <div class="product-short-desc" data-aos="fade-left">
                             <p>
                                 Nikmati perjalanan yang nyaman dan aman dengan bus kami yang dirancang khusus untuk memberikan pengalaman terbaik bagi penumpang. Dengan kursi yang luas, fasilitas modern, dan pengemudi profesional, kami siap menemani perjalanan Anda.
                             </p>
@@ -208,10 +218,13 @@
                                 Baik untuk perjalanan bisnis maupun wisata, bus kami dilengkapi dengan interior berkualitas tinggi serta fitur keselamatan canggih untuk memberikan ketenangan selama perjalanan.
                             </p>
                         </div>
-    
+                    
+                        
                         <!-- Fasilitas -->
-                        <h2 class="product-name"><i class="fas fa-star"></i> Fasilitas</h2>
-                        <div class="row mb-4">
+                        <h2 class="product-name" data-aos="fade-up">
+                            <i class="fas fa-star"></i> Fasilitas
+                        </h2>
+                        <div class="row mb-4" data-aos="fade-right">
                             <div class="col-md-4 col-12">
                                 <img src="assets/details_gambar/gambar1.jpg" class="img-fluid" alt="Fasilitas">
                             </div>
@@ -222,7 +235,7 @@
                                 <img src="assets/details_gambar/gambar3.png" class="img-fluid" alt="Fasilitas">
                             </div>
                         </div>
-                        <div class="product-short-desc">
+                        <div class="product-short-desc" data-aos="fade-left">
                             <ul>
                                 <li><i class="fas fa-snowflake"></i> Interior ber-AC untuk kenyamanan maksimal</li>
                                 <li><i class="fas fa-wifi"></i> Koneksi Wi-Fi di dalam bus</li>
@@ -233,6 +246,7 @@
                             </ul>
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </div>
@@ -240,7 +254,108 @@
     
     
     
+    <section class="bg-light mb-5 py-3">
+        <div class="container">
+            <div class="row">
+                <!-- Bagian Kiri (Peta Kursi) -->
+                <div class="col-lg-8 col-md-12">
+                    <div class="text-center">
+                        <p class="fw-bold bg-danger text-white py-2 rounded-0">
+                            Klik pilihan kursi yang tersedia kemudian lanjut ke bagian pembayaran.
+                        </p>
+                    </div>
     
+                    <!-- Peta Kursi -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="d-flex justify-content-center gap-3 p-3">
+                                <!-- Simbol Pengguna -->
+                                <div class="d-flex gap-3 border-end pe-2 border-2">
+                                    <i class="fa-solid fa-user fs-4"></i>
+                                </div>
+                                <!-- Barisan Kursi -->
+                                <div class="d-flex justify-content-center gap-3 flex-column">
+                                    <!-- Baris 1 -->
+                                    <div class="d-flex gap-3">
+                                        <i class="fa-solid fa-chair text-success fs-4"></i>
+                                        <i class="fa-solid fa-chair text-success fs-4"></i>
+                                        <i class="fa-solid fa-chair text-success fs-4"></i>
+                                        <i class="fa-solid fa-chair text-success fs-4"></i>
+                                        <i class="fa-solid fa-chair text-success fs-4"></i>
+                                        <i class="fa-solid fa-chair text-secondary fs-4"></i>
+                                        <i class="fa-solid fa-chair text-success fs-4"></i>
+                                        <i class="fa-solid fa-chair text-success fs-4"></i>
+                                        <i class="fa-solid fa-chair text-success fs-4"></i>
+                                        <i class="fa-solid fa-chair text-secondary fs-4"></i>
+                                    </div>
+                                    <!-- Baris 2 -->
+                                    <div class="d-flex gap-3">
+                                        <i class="fa-solid fa-chair text-success fs-4"></i>
+                                        <i class="fa-solid fa-chair text-success fs-4"></i>
+                                        <i class="fa-solid fa-chair text-success fs-4"></i>
+                                        <i class="fa-solid fa-chair text-success fs-4"></i>
+                                        <i class="fa-solid fa-chair text-success fs-4"></i>
+                                        <i class="fa-solid fa-chair text-secondary fs-4"></i>
+                                        <i class="fa-solid fa-chair text-success fs-4"></i>
+                                        <i class="fa-solid fa-chair text-success fs-4"></i>
+                                        <i class="fa-solid fa-chair text-success fs-4"></i>
+                                        <i class="fa-solid fa-chair text-secondary fs-4"></i>
+                                    </div>
+                                    <!-- Baris 3 -->
+                                    <div class="d-flex gap-3 mt-3">
+                                        <i class="fa-solid fa-chair text-success fs-4"></i>
+                                        <i class="fa-solid fa-chair text-success fs-4"></i>
+                                        <i class="fa-solid fa-chair text-success fs-4"></i>
+                                        <i class="fa-solid fa-chair text-success fs-4"></i>
+                                        <i class="fa-solid fa-chair text-success fs-4"></i>
+                                        <i class="fa-solid fa-chair text-secondary fs-4"></i>
+                                        <i class="fa-solid fa-chair text-success fs-4"></i>
+                                        <i class="fa-solid fa-chair text-success fs-4"></i>
+                                        <i class="fa-solid fa-chair text-success fs-4"></i>
+                                        <i class="fa-solid fa-chair text-secondary fs-4"></i>
+                                    </div>
+                                    <!-- Baris 4 -->
+                                    <div class="d-flex gap-3">
+                                        <i class="fa-solid fa-chair text-success fs-4"></i>
+                                        <i class="fa-solid fa-chair text-success fs-4"></i>
+                                        <i class="fa-solid fa-chair text-success fs-4"></i>
+                                        <i class="fa-solid fa-chair text-success fs-4"></i>
+                                        <i class="fa-solid fa-chair text-success fs-4"></i>
+                                        <i class="fa-solid fa-chair text-secondary fs-4"></i>
+                                        <i class="fa-solid fa-chair text-success fs-4"></i>
+                                        <i class="fa-solid fa-chair text-success fs-4"></i>
+                                        <i class="fa-solid fa-chair text-success fs-4"></i>
+                                        <i class="fa-solid fa-chair text-secondary fs-4"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Bagian Kanan (Keterangan Kursi) -->
+                <div class="col-lg-4 col-md-12">
+                    <p class="fw-bold">Keterangan Tempat Duduk</p>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fa-solid fa-chair text-success me-2"></i>
+                        <span>Tersedia</span>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fa-solid fa-chair text-secondary me-2"></i>
+                        <span>Tidak Tersedia</span>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fa-solid fa-chair text-warning me-2"></i>
+                        <span>Dipesan</span>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fa-solid fa-chair text-danger me-2"></i>
+                        <span>Ditempati</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
     <footer class="footer" style="background-color: #f3f6fa;">
@@ -325,7 +440,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
 
     <script>
         // Initialize AOS
@@ -333,48 +447,6 @@
             duration: 1000, // Durasi animasi
             once: true,     // Animasi hanya sekali saat scroll
         });
-
-        // GSAP animations
-        gsap.from(".header-main", {
-            opacity: 0,
-            y: -50,
-            duration: 1.5,
-            ease: "power4.out"
-        });
-
-        gsap.from(".content-search .input-group", {
-            opacity: 0,
-            x: -50,
-            stagger: 0.2,
-            duration: 1,
-            ease: "power4.out"
-        });
-
-        gsap.from(".btn-dangtext-danger", {
-            opacity: 0,
-            y: 30,
-            duration: 1,
-            delay: 0.6,
-            ease: "power4.out"
-        });
-
-
-        gsap.from(".bantuan .list-group-item", {
-            opacity: 0,
-            x: -100,
-            stagger: 0.1,
-            duration: 1.5,
-            ease: "power4.out"
-        });
-
-        gsap.from(".bantuan form", {
-            opacity: 0,
-            scale: 0.8,
-            duration: 1.5,
-            ease: "power4.out",
-            delay: 0.5
-        });
-
     </script>
 </body>
 

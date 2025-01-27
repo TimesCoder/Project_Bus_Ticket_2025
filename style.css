@@ -1,3 +1,4 @@
+/* jenis tulisan */
 body,
 button,
 input,
@@ -11,6 +12,7 @@ body {
   overflow-x: hidden;
 }
 
+/* ukuran layar */
 @media (min-width: 1200px) {
   .container {
     max-width: 1170px;
@@ -27,6 +29,7 @@ body {
   }
 }
 
+/* navbar */
 .top-bar {
   padding: 12px 0;
   background-color: #f5f5f5;
@@ -37,20 +40,17 @@ body {
   font-weight: 300;
 }
 
-/* Menyembunyikan dropdown secara default */
 .nav-item.dropdown .dropdown-menu {
   display: none;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
 
-/* Menampilkan dropdown saat hover */
 .nav-item.dropdown:hover .dropdown-menu {
   display: block;
   opacity: 1;
 }
 
-/* Styling dropdown agar terlihat rapi */
 .nav-item.dropdown .dropdown-menu {
   top: 100%;
   left: 0;
@@ -62,82 +62,30 @@ body {
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Styling item di dalam dropdown */
 .nav-item.dropdown .dropdown-menu .dropdown-item {
   padding: 0.5rem 1rem;
   color: #333;
   text-decoration: none;
   transition: background-color 0.2s ease-in-out;
 }
-/* Pop Up Login dan Register */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
 
-.modal-content {
-  background-color: white;
-  margin: 2% auto;
-  padding: 20px;
-  border-radius: 20px;
-  width: 80%;
-  max-width: 500px;
-  overflow: hidden;
-}
 
-.close {
-  color: #aaa;
-  font-size: 28px;
-  font-weight: bold;
-  margin-left: 27rem;
-}
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.swipe-container {
-  transform: translateX(100%);
-  transition: transform 0.4s ease-in-out;
-}
-
-.swipe-in {
-  transform: translateX(0);
-}
-.switch-btn {
-  margin-top: 20px;
-  color: #007bff;
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-.switch-btn:hover {
-  color: #0056b3;
-}
-
-/* Efek hover pada item */
 .nav-item.dropdown .dropdown-menu .dropdown-item:hover {
   background-color: #f8f9fa;
   color: #000;
 }
 
-.container > h2 {
-  position: relative; /* Membuat h2 menjadi acuan untuk elemen pseudo */
-  display: inline-block; /* Membatasi lebar h2 sesuai kontennya */
+.container>h2 {
+  position: relative;
+  display: inline-block;
 }
 
-.container > h2::after {
+.container>h2::after {
   content: "";
-  display: block; /* Mengubah elemen menjadi blok agar margin bekerja */
-  margin: 0 auto; /* Membuat elemen berada di tengah secara horizontal */
+  display: block;
+  /* Mengubah elemen menjadi blok agar margin bekerja */
+  margin: 0 auto;
+  /* Membuat elemen berada di tengah secara horizontal */
   margin-top: 5px;
   width: 200px;
   height: 3px;
@@ -200,32 +148,99 @@ body {
   background-image: url("assets/background/bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; /* Untuk memastikan gambar memenuhi seluruh area */
+  background-size: cover;
+  /* Untuk memastikan gambar memenuhi seluruh area */
   height: 40rem;
   display: flex;
   justify-content: center;
-  align-items: center; /* Tengah vertikal */
+  align-items: center;
+  /* Tengah vertikal */
 }
 
 .content-box {
-  background-color: rgba(255, 255, 255, 0.8); /* Efek transparan pada kotak */
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Efek transparan pada kotak */
   padding: 20px;
-  border-radius: 8px; /* Membuat sudut kotak menjadi bulat */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Memberikan bayangan */
+  border-radius: 8px;
+  /* Membuat sudut kotak menjadi bulat */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  /* Memberikan bayangan */
 }
 
 .form-control {
-  height: 3rem; /* Agar semua input terlihat lebih besar dan rapi */
+  height: 3rem;
+  /* Agar semua input terlihat lebih besar dan rapi */
 }
 
 .btn {
   height: 3rem;
-  font-size: 1.1rem; /* Membuat tombol lebih jelas */
+  font-size: 1.1rem;
+  /* Membuat tombol lebih jelas */
 }
 
 .input-group-text {
-  font-size: 1.2rem; /* Membesarkan ikon */
+  font-size: 1.2rem;
+  /* Membesarkan ikon */
 }
+
+
+
+/* Pop Up Login dan Register */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 2% auto;
+  padding: 20px;
+  border-radius: 20px;
+  width: 80%;
+  max-width: 500px;
+  overflow: hidden;
+}
+
+.close {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  margin-left: 27rem;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.swipe-container {
+  transform: translateX(100%);
+  transition: transform 0.4s ease-in-out;
+}
+
+.swipe-in {
+  transform: translateX(0);
+}
+
+.switch-btn {
+  margin-top: 20px;
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.switch-btn:hover {
+  color: #0056b3;
+}
+
 
 /*---------------------------
 FOOTER
@@ -243,160 +258,178 @@ FOOTER
 
 
 
+/* details bus style */
 
 .content-1 h2.product-name {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #df3d3d;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #df3d3d;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .product-short-desc p,
 .product-short-desc ul li {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
 }
 
 .product-short-desc ul {
-    list-style-type: none;
-    padding-left: 0;
+  list-style-type: none;
+  padding-left: 0;
 }
 
 .product-short-desc ul li {
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .bus-info p {
-    font-size: 1rem;
-    color: #333;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .btn-primary {
-    background-color: #df3d3d;
-    border: none;
-    padding: 10px 15px;
-    font-size: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: background-color 0.3s;
+  background-color: #df3d3d;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
 }
 
 .btn-primary i {
-    margin-right: 8px;
+  margin-right: 8px;
 }
 
 .btn-primary:hover {
-    background-color: #df3d3d;
-    ;
+  background-color: #df3d3d;
+  ;
 }
 
 .strip-1 {
-    position: relative;
+  position: relative;
 }
 
 .strip-1::after {
-    content: "";
-    position: absolute;
-    top: 12%;
-    right: -57px; /* Sesuaikan nilai ini agar jarak garis sesuai */
-    transform: translateY(-50%);
-    display: block;
-    width: 113px; /* Panjang garis */
-    height: 2px; /* Ketebalan garis */
-    background-color: #777; /* Mengubah warna garis menjadi abu-abu */
+  content: "";
+  position: absolute;
+  top: 12%;
+  right: -57px;
+  /* Sesuaikan nilai ini agar jarak garis sesuai */
+  transform: translateY(-50%);
+  display: block;
+  width: 113px;
+  /* Panjang garis */
+  height: 2px;
+  /* Ketebalan garis */
+  background-color: #777;
+  /* Mengubah warna garis menjadi abu-abu */
 }
 
 .strip-1:last-child::after {
-    content: none; /* Hilangkan garis pada elemen terakhir */
+  content: none;
+  /* Hilangkan garis pada elemen terakhir */
 }
 
 .strip-1 i {
-    color: #df3d3d;
+  color: #df3d3d;
 }
 
 .strip-2 {
-    position: relative;
+  position: relative;
 }
 
 .strip-2::after {
-    content: "";
-    position: absolute;
-    top: 27%;
-    right: -233px; /* Sesuaikan nilai ini agar jarak garis sesuai */
-    transform: translateY(-50%);
-    display: block;
-    width: 275px; /* Panjang garis */
-    height: 2px; /* Ketebalan garis */
-    background-color: #777; /* Mengubah warna garis menjadi abu-abu */
+  content: "";
+  position: absolute;
+  top: 27%;
+  right: -233px;
+  /* Sesuaikan nilai ini agar jarak garis sesuai */
+  transform: translateY(-50%);
+  display: block;
+  width: 275px;
+  /* Panjang garis */
+  height: 2px;
+  /* Ketebalan garis */
+  background-color: #777;
+  /* Mengubah warna garis menjadi abu-abu */
 }
 
 .strip-2:last-child::after {
-    content: none; /* Hilangkan garis pada elemen terakhir */
+  content: none;
+  /* Hilangkan garis pada elemen terakhir */
 }
 
 .strip-2 p {
-    font-size: 14px; /* Ukuran font waktu yang lebih kecil */
-    color: #333; /* Warna teks waktu */
-    margin: 5px 0; /* Jarak antara waktu dan elemen lain */
+  font-size: 14px;
+  /* Ukuran font waktu yang lebih kecil */
+  color: #333;
+  /* Warna teks waktu */
+  margin: 5px 0;
+  /* Jarak antara waktu dan elemen lain */
 }
 
 .strip-2 i {
-    color: #df3d3d;
+  color: #df3d3d;
 }
 
 
 
 .bus-image {
-    height: 300px;
-    /* Tinggi gambar */
-    width: 100%;
-    /* Lebar gambar */
-    object-fit: cover;
-    /* Memastikan gambar tetap proporsional */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    /* Menambahkan efek bayangan */
-    transition: transform 0.3s ease;
-    /* Efek transisi saat hover */
+  height: 300px;
+  /* Tinggi gambar */
+  width: 100%;
+  /* Lebar gambar */
+  object-fit: cover;
+  /* Memastikan gambar tetap proporsional */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  /* Menambahkan efek bayangan */
+  transition: transform 0.3s ease;
+  /* Efek transisi saat hover */
 }
 
 .bus-image:hover {
-    transform: scale(1.05);
-    /* Perbesar gambar saat hover */
+  transform: scale(1.05);
+  /* Perbesar gambar saat hover */
 }
 
 .content-box {
-    background-color: rgba(255, 255, 255, 0.8);
-    /* Efek transparan pada kotak */
-    padding: 20px;
-    border-radius: 8px;
-    /* Membuat sudut kotak menjadi bulat */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    /* Memberikan bayangan */
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Efek transparan pada kotak */
+  padding: 20px;
+  border-radius: 8px;
+  /* Membuat sudut kotak menjadi bulat */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  /* Memberikan bayangan */
 }
 
 .form-control {
-    height: 3rem;
-    /* Agar semua input terlihat lebih besar dan rapi */
+  height: 3rem;
+  /* Agar semua input terlihat lebih besar dan rapi */
 }
 
 .btn {
-    height: 3rem;
-    font-size: 1.1rem;
-    /* Membuat tombol lebih jelas */
+  height: 3rem;
+  font-size: 1.1rem;
+  /* Membuat tombol lebih jelas */
 }
 
 .input-group-text {
-    font-size: 1.2rem;
-    /* Membesarkan ikon */
+  font-size: 1.2rem;
+  /* Membesarkan ikon */
 }
+
+
+
+
