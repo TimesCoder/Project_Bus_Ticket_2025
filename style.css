@@ -4,197 +4,239 @@ input,
 select,
 optgroup,
 textarea {
-    font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 @media (min-width: 1200px) {
-    .container {
-        max-width: 1170px;
-    }
+  .container {
+    max-width: 1170px;
+  }
 }
 
 @media (min-width: 992px) {
-    .navbar-expand-lg .navbar-nav .nav-link {
-        padding-left: 0;
-    }
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-left: 0;
+  }
 
-    .breadcrumb-section .breadcrumb {
-        padding-left: 0;
-    }
+  .breadcrumb-section .breadcrumb {
+    padding-left: 0;
+  }
 }
 
 .top-bar {
-    padding: 12px 0;
-    background-color: #f5f5f5;
+  padding: 12px 0;
+  background-color: #f5f5f5;
 }
 
 .top-bar span {
-    font-size: 13px;
-    font-weight: 300;
+  font-size: 13px;
+  font-weight: 300;
 }
 
 /* Menyembunyikan dropdown secara default */
 .nav-item.dropdown .dropdown-menu {
-    display: none;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
 /* Menampilkan dropdown saat hover */
 .nav-item.dropdown:hover .dropdown-menu {
-    display: block;
-    opacity: 1;
+  display: block;
+  opacity: 1;
 }
 
 /* Styling dropdown agar terlihat rapi */
 .nav-item.dropdown .dropdown-menu {
-    top: 100%;
-    left: 0;
-    z-index: 1000;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 0.5rem 0;
-    border-radius: 4px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 0.5rem 0;
+  border-radius: 4px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Styling item di dalam dropdown */
 .nav-item.dropdown .dropdown-menu .dropdown-item {
-    padding: 0.5rem 1rem;
-    color: #333;
-    text-decoration: none;
-    transition: background-color 0.2s ease-in-out;
+  padding: 0.5rem 1rem;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out;
+}
+/* Pop Up Login dan Register */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 20px;
+  width: 80%;
+  max-width: 500px;
+  overflow: hidden;
+}
+
+.close {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  margin-left: 27rem;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.swipe-container {
+  transform: translateX(100%);
+  transition: transform 0.4s ease-in-out;
+}
+
+.swipe-in {
+  transform: translateX(0);
+}
+.switch-btn {
+  margin-top: 20px;
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.switch-btn:hover {
+  color: #0056b3;
 }
 
 /* Efek hover pada item */
 .nav-item.dropdown .dropdown-menu .dropdown-item:hover {
-    background-color: #f8f9fa;
-    color: #000;
+  background-color: #f8f9fa;
+  color: #000;
 }
 
 .container > h2 {
-    position: relative; /* Membuat h2 menjadi acuan untuk elemen pseudo */
-    display: inline-block; /* Membatasi lebar h2 sesuai kontennya */
+  position: relative; /* Membuat h2 menjadi acuan untuk elemen pseudo */
+  display: inline-block; /* Membatasi lebar h2 sesuai kontennya */
 }
 
 .container > h2::after {
-    content: "";
-    display: block; /* Mengubah elemen menjadi blok agar margin bekerja */
-    margin: 0 auto; /* Membuat elemen berada di tengah secara horizontal */
-    margin-top: 5px;
-    width: 200px;
-    height: 3px;
-    background-color: #3d55df;
+  content: "";
+  display: block; /* Mengubah elemen menjadi blok agar margin bekerja */
+  margin: 0 auto; /* Membuat elemen berada di tengah secara horizontal */
+  margin-top: 5px;
+  width: 200px;
+  height: 3px;
+  background-color: #3d55df;
 }
 
 .quick-view {
-    opacity: 0;
-    right: -2%;
-    transform: translateX(5px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  right: -2%;
+  transform: translateX(5px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .hover-text-danger:hover {
-    color: #dc3545;
-    /* Warna teks 'danger' bawaan Bootstrap */
-    transition: 0.3s;
+  color: #dc3545;
+  /* Warna teks 'danger' bawaan Bootstrap */
+  transition: 0.3s;
 }
 
 .quick-view i {
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 50%;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 50%;
 }
 
 #gambar-content:hover .quick-view {
-    opacity: 1;
-    right: 0;
-    transform: translateX(0);
+  opacity: 1;
+  right: 0;
+  transform: translateX(0);
 }
 
 .menu-dropdown {
-    display: block;
-    position: absolute;
-    right: 4.5%;
-    top: 8%;
-    opacity: 0;
-    transform: translateY(10px);
-    /* Geser ke bawah saat tidak di-hover */
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    pointer-events: none;
-    /* Mencegah interaksi saat dropdown tidak terlihat */
+  display: block;
+  position: absolute;
+  right: 4.5%;
+  top: 8%;
+  opacity: 0;
+  transform: translateY(10px);
+  /* Geser ke bawah saat tidak di-hover */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+  /* Mencegah interaksi saat dropdown tidak terlihat */
 }
 
 .d-lang:hover .menu-dropdown {
-    opacity: 1;
-    top: 6%;
-    transform: translateY(0);
-    /* Geser ke atas saat di-hover */
-    pointer-events: auto;
-    /* Aktifkan interaksi */
+  opacity: 1;
+  top: 6%;
+  transform: translateY(0);
+  /* Geser ke atas saat di-hover */
+  pointer-events: auto;
+  /* Aktifkan interaksi */
 }
 
 .menu-dropdown button {
-    color: #fff;
-    font-size: 13px;
-}
-
-
-
-.content-search{
-    background-image: url("assets/background/bg1.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 20rem;
+  color: #fff;
+  font-size: 13px;
 }
 
 .content-search {
-    background-image: url("assets/background/bg1.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; /* Untuk memastikan gambar memenuhi seluruh area */
-    height: 30rem;
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Tengah vertikal */
+  background-image: url("assets/background/bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; /* Untuk memastikan gambar memenuhi seluruh area */
+  height: 40rem;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Tengah vertikal */
 }
 
 .content-box {
-    background-color: rgba(255, 255, 255, 0.8); /* Efek transparan pada kotak */
-    padding: 20px;
-    border-radius: 8px; /* Membuat sudut kotak menjadi bulat */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Memberikan bayangan */
+  background-color: rgba(255, 255, 255, 0.8); /* Efek transparan pada kotak */
+  padding: 20px;
+  border-radius: 8px; /* Membuat sudut kotak menjadi bulat */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Memberikan bayangan */
 }
 
 .form-control {
-    height: 3rem; /* Agar semua input terlihat lebih besar dan rapi */
+  height: 3rem; /* Agar semua input terlihat lebih besar dan rapi */
 }
 
 .btn {
-    height: 3rem;
-    font-size: 1.1rem; /* Membuat tombol lebih jelas */
+  height: 3rem;
+  font-size: 1.1rem; /* Membuat tombol lebih jelas */
 }
 
 .input-group-text {
-    font-size: 1.2rem; /* Membesarkan ikon */
+  font-size: 1.2rem; /* Membesarkan ikon */
 }
-
-
 
 /*---------------------------
 FOOTER
 ----------------------------*/
 .footer__widget .input-group span {
-    padding: 13px 0;
+  padding: 13px 0;
 }
 
 .footer__widget__social a i {
-    background-color: white;
-    border-radius: 50%;
-    padding: 13px;
-    margin: 0;
+  background-color: white;
+  border-radius: 50%;
+  padding: 13px;
+  margin: 0;
 }

@@ -13,9 +13,72 @@
     <link type="text/css" href="style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
 </head>
 
 <body>
+    <div id="popup" class="modal">
+        <div class="modal-content container">
+            <span id="close" class="close" onclick="hideModal()">&times;</span>
+            <!-- Login Form -->
+            <div id="loginForm">
+                <h2 class="text-center text-dark fw-bold mb-4">Login</h2>
+                <form class="login-form">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="example@gmail.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div>
+                            <input type="checkbox" id="remember-me">
+                            <label for="remember-me" class="form-check-label">Remember me</label>
+                        </div>
+                        <a href="#" class="text-decoration-none text-danger">Forgot Password?</a>
+                    </div>
+                    <div class="d-grid gap-2 mb-3">
+                        <button class="btn btn-outline-dark rounded-0 d-flex align-items-center justify-content-center">
+                            <a href="#" class="text-decoration-none text-dark"><i class="fab fa-google"></i> Login With Google</a>
+                        </button>
+                        <button class="btn btn-outline-dark rounded-0 d-flex align-items-center justify-content-center">
+                            <a href="#" class="text-decoration-none text-dark"><i class="fab fa-facebook"></i> Login with Facebook</a>
+                        </button>
+                    </div>
+                    <button type="submit" class="btn btn-dark w-100 rounded-0">Login</button>
+                </form>
+                <p class="text-center mt-3">
+                    Belum punya akun? <span class="switch-btn" onclick="showRegister()">Register</span>
+                </p>
+            </div>
+    
+            <!-- Register Form -->
+            <div id="registerForm" class="swipe-container" style="display: none;">
+                <h2 class="text-center text-dark fw-bold mb-4">Register</h2>
+                <form class="register-form">
+                    <div class="mb-3">
+                        <label for="register-email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="register-email" placeholder="example@gmail.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="register-password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="register-password" placeholder="Enter your password">
+                    </div>
+                    <div class="mb-3">
+                        <label for="confirm-password" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" id="confirm-password" placeholder="Confirm your password">
+                    </div>
+                    <button type="submit" class="btn btn-dark w-100 rounded-0">Register</button>
+                </form>
+                <p class="text-center mt-3">
+                    Sudah punya akun? <span class="switch-btn" onclick="showLogin()">Login</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    
     <header class="header" style="position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background-color: #fff;"
         data-aos="fade-down">
         <div class="top-bar">
@@ -62,6 +125,9 @@
 
                                 <li class="nav-item">
                                     <a class="nav-link" href="index.html">BANTUAN</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link"><i class="fa fa-user" onclick="showModal()"></i></a>
                                 </li>
                             </ul>
                         </div>
@@ -146,7 +212,7 @@
 
     <section class="py-4">
         <div class="container text-center">
-            <h2 class="mb-3 text-uppercase fw-bold " data-aos="fade-up">Vasilitas Bus</h2>
+            <h2 class="mb-3 text-uppercase fw-bold " data-aos="fade-up">Fasilitas Bus</h2>
             <div class="row text-start">
                 <!-- Fasilitas 1 -->
                 <div class="col-xl-3 col-lg-4 col-md-6 col-12" data-aos="fade-left" data-aos-duration="1000"
