@@ -5,26 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Commerce Web</title>
+    <title>PUTRA PELANGI TICKETING</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/css/bootstrap.min.css">
-
-    <!-- fonts google -->
     <link
         href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
         rel="stylesheet">
-
     <link type="text/css" href="style.css" rel="stylesheet">
-
-    <!-- fonts icon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" style="position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background-color: #fff;"
+        data-aos="fade-down">
         <div class="top-bar">
             <div class="container">
                 <div class="d-flex align-items-center justify-content-between">
@@ -37,11 +30,7 @@
                     </div>
 
                     <div class="d-lang">
-                        <span class="dropdown-toggle">
-                            English
-                        </span>
-
-                        <!-- menu -->
+                        <span class="dropdown-toggle">English</span>
                         <div class="dropdown-menu menu-dropdown position-absolute bg-dark rounded-0 p-1"
                             aria-labelledby="dropdownMenu2">
                             <button class="dropdown-item" type="button">Indonesia</button>
@@ -54,14 +43,12 @@
 
         <!-- search -->
 
-
         <div class="header-main py-3">
             <div class="container">
                 <div class="menu d-flex align-items-center justify-content-between">
                     <div class="brand-prooduct">
                         <a href="index.html" class="nav-link fs-3 fw-bold" id="icon">PUTRA PELANGI TICKETING</a>
                     </div>
-
 
                     <div class="header-navbar">
                         <div class="container">
@@ -70,24 +57,315 @@
                                     <a class="nav-link" href="index.html">TICKET BUS ONLINE</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="index.html">PARTNER KAMI</a>
+                                    <a class="nav-link" href="index.html">ABOUT</a>
                                 </li>
+
                                 <li class="nav-item">
                                     <a class="nav-link" href="index.html">BANTUAN</a>
                                 </li>
-
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="mb-3 col-md-12 container">
-                <label for="" class="form-label"></label>
-                <input class="form-control" id="" type="text" placeholder="Cari Ticket Bus" aria-label="">
-            </div>
         </div>
     </header>
+
+
+
+    <section class="content-search " style="margin-top: 120px;">
+        <div class="content-box">
+            <div class="container">
+                <div class="row g-3 align-items-center justify-content-center">
+                    <!-- Input "Dari" -->
+                    <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+                        <div class="input-group">
+                            <span class="input-group-text bg-light text-primary rounded-0">
+                                <i class="fas fa-city"></i>
+                            </span>
+                            <div class="form-floating">
+                                <input type="text" id="dari" class="form-control rounded-0" placeholder="Dari">
+                                <label for="dari">Dari</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Input "Ke" -->
+                    <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+                        <div class="input-group">
+                            <span class="input-group-text bg-light text-primary rounded-0">
+                                <i class="fas fa-city"></i>
+                            </span>
+                            <div class="form-floating">
+                                <input type="text" id="ke" class="form-control rounded-0" placeholder="Ke">
+                                <label for="ke">Ke</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Input "Tanggal Pergi" -->
+                    <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+                        <div class="input-group">
+                            <span class="input-group-text bg-light text-primary rounded-0">
+                                <i class="fas fa-calendar-alt"></i>
+                            </span>
+                            <div class="form-floating">
+                                <input type="date" id="tanggal-pergi" class="form-control rounded-0"
+                                    placeholder="Tanggal Pergi">
+                                <label for="tanggal-pergi">Tanggal Pergi</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Input "Tanggal Pulang" -->
+                    <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
+                        <div class="input-group">
+                            <span class="input-group-text bg-light text-primary rounded-0">
+                                <i class="fas fa-calendar-alt"></i>
+                            </span>
+                            <div class="form-floating">
+                                <input type="date" id="tanggal-pulang" class="form-control rounded-0"
+                                    placeholder="Tanggal Pulang">
+                                <label for="tanggal-pulang">Tanggal Pulang</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tombol Cari -->
+                <div class="row mt-3 justify-content-center">
+                    <div class="col-md-3 text-center" data-aos="zoom-in" data-aos-delay="500">
+                        <button class="btn btn-primary w-100">
+                            <i class="fas fa-search"></i> Cari Bus
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-4">
+        <div class="container">
+            <div class="brand-prooduct">
+                <h2 class="fs-5">VASILITAS BUS</h2>
+            </div>
+
+            <div class="row my-4">
+                <!-- Fasilitas 1 -->
+                <div class="col-xl-3 col-lg-4 col-md-6 col-12" data-aos="fade-left" data-aos-duration="1000"
+                    data-aos-delay="200">
+                    <div class="single-product card rounded-1">
+                        <div class="product-img position-relative" id="gambar-content">
+                            <a href="product-detail.html">
+                                <img src="https://images.pexels.com/photos/205353/pexels-photo-205353.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                    class="img-fluid rounded-0" alt="Fasilitas WiFi">
+                            </a>
+                        </div>
+                        <div class="product-content p-2">
+                            <h3 class="h6 pt-2">
+                                <a href="product-detail.html" class="text-dark text-decoration-none">WiFi Gratis</a>
+                            </h3>
+                            <p class="text-muted small">
+                                Nikmati akses internet tanpa batas selama perjalanan.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fasilitas 2 -->
+                <div class="col-xl-3 col-lg-4 col-md-6 col-12" data-aos="fade-left" data-aos-duration="1000"
+                    data-aos-delay="400">
+                    <div class="single-product card rounded-1">
+                        <div class="product-img position-relative" id="gambar-content">
+                            <a href="product-detail.html">
+                                <img src="https://images.pexels.com/photos/1546985/pexels-photo-1546985.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                    class="img-fluid rounded-0" alt="Fasilitas Kursi">
+                            </a>
+                        </div>
+                        <div class="product-content p-2">
+                            <h3 class="h6 pt-2">
+                                <a href="product-detail.html" class="text-dark text-decoration-none">Kursi Ergonomis</a>
+                            </h3>
+                            <p class="text-muted small">
+                                Kursi nyaman dengan pengaturan posisi yang fleksibel.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fasilitas 3 -->
+                <div class="col-xl-3 col-lg-4 col-md-6 col-12" data-aos="fade-left" data-aos-duration="1000"
+                    data-aos-delay="600">
+                    <div class="single-product card rounded-1">
+                        <div class="product-img position-relative" id="gambar-content">
+                            <a href="product-detail.html">
+                                <img src="https://images.pexels.com/photos/11998040/pexels-photo-11998040.jpeg?auto=compress&cs=tinysrgb&w=600"
+                                    class="img-fluid rounded-0" alt="Fasilitas Hiburan">
+                            </a>
+                        </div>
+                        <div class="product-content p-2">
+                            <h3 class="h6 pt-2">
+                                <a href="product-detail.html" class="text-dark text-decoration-none">Hiburan
+                                    Multimedia</a>
+                            </h3>
+                            <p class="text-muted small">
+                                Layar TV pribadi dengan pilihan film dan musik terbaru.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fasilitas 4 -->
+                <div class="col-xl-3 col-lg-4 col-md-6 col-12" data-aos="fade-left" data-aos-duration="1000"
+                    data-aos-delay="800">
+                    <div class="single-product card rounded-1">
+                        <div class="product-img position-relative" id="gambar-content">
+                            <a href="product-detail.html">
+                                <img src="https://images.pexels.com/photos/29631639/pexels-photo-29631639/free-photo-of-pemandangan-dalam-bus-umum-yang-disinari-matahari.jpeg?auto=compress&cs=tinysrgb&w=600"
+                                    class="img-fluid rounded-0" alt="Fasilitas AC">
+                            </a>
+                        </div>
+                        <div class="product-content p-2">
+                            <h3 class="h6 pt-2">
+                                <a href="product-detail.html" class="text-dark text-decoration-none">AC Dingin</a>
+                            </h3>
+                            <p class="text-muted small">
+                                Suasana nyaman dengan pendingin udara sepanjang perjalanan.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="about-us bg-light py-5">
+        <div class="container text-center">
+            <h2 class="mb-4 text-uppercase fw-bold" data-aos="fade-up">Tentang Kami</h2>
+            <p class="text-muted" data-aos="fade-up" data-aos-delay="100">
+                Putra Pelangi Ticketing adalah platform pemesanan tiket bus online yang dirancang untuk memberikan
+                pengalaman perjalanan yang lebih mudah, nyaman, dan aman bagi setiap pelanggan. Dengan antarmuka yang
+                ramah pengguna dan teknologi canggih, kami hadir untuk menjawab kebutuhan transportasi Anda ke berbagai
+                destinasi di Indonesia.
+            </p>
+            <p class="text-muted" data-aos="fade-up" data-aos-delay="200">
+                Kami memahami pentingnya perjalanan yang lancar dan tanpa hambatan, sehingga kami berkomitmen untuk
+                selalu meningkatkan layanan kami agar sesuai dengan harapan Anda. Dengan Putra Pelangi Ticketing, Anda
+                dapat memesan tiket kapan saja dan di mana saja, dengan harga yang kompetitif dan proses yang sangat
+                mudah.
+            </p>
+            <div class="row mt-5">
+                <!-- Sejarah -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card shadow-sm h-100 border-0">
+                        <div class="card-body">
+                            <h5 class="text-primary fw-bold mb-3">Sejarah Kami</h5>
+                            <p class="text-muted small">
+                                Berdiri sejak tahun 2020, Putra Pelangi Ticketing didirikan dengan tujuan memberikan
+                                solusi pemesanan tiket bus yang modern di era digital. Kami bermula dari semangat untuk
+                                menghubungkan orang-orang dengan berbagai tujuan, dan kini telah menjadi salah satu
+                                platform terpercaya di Indonesia.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Layanan -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card shadow-sm h-100 border-0">
+                        <div class="card-body">
+                            <h5 class="text-primary fw-bold mb-3">Layanan Kami</h5>
+                            <p class="text-muted small">
+                                Kami menawarkan berbagai layanan, termasuk pemesanan tiket bus online, informasi jadwal
+                                perjalanan, ulasan operator bus, hingga pembaruan rute terbaru. Semua ini kami sediakan
+                                untuk memastikan perjalanan Anda terasa lebih aman dan nyaman.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Komitmen -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="card shadow-sm h-100 border-0">
+                        <div class="card-body">
+                            <h5 class="text-primary fw-bold mb-3">Komitmen Kami</h5>
+                            <p class="text-muted small">
+                                Kepuasan pelanggan adalah prioritas utama kami. Kami berkomitmen untuk menyediakan
+                                layanan yang dapat diandalkan, mendukung pengalaman perjalanan yang lebih baik, dan
+                                terus berkembang mengikuti kebutuhan pelanggan serta kemajuan teknologi.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bantuan py-5" data-aos="fade-up" data-aos-duration="1500">
+        <div class="container text-center">
+            <h2 class="mb-3 text-uppercase fw-bold" data-aos="fade-up" data-aos-duration="1500">Bantuan & Dukungan</h2>
+            <p class="text-muted" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
+                Jika Anda memiliki pertanyaan atau membutuhkan bantuan, tim kami siap membantu Anda. Lihat pertanyaan
+                umum di bawah atau hubungi kami langsung.
+            </p>
+            <div class="row mt-4">
+                <!-- FAQ -->
+                <div class="col-md-6 mb-4" data-aos="fade-left" data-aos-duration="1500">
+                    <h5 class="text-primary fw-bold">Pertanyaan Umum</h5>
+                    <ul class="list-group small text-start mx-auto" style="max-width: 400px;">
+                        <li class="list-group-item border-0 ps-0">
+                            <strong>Bagaimana cara mendaftar?</strong>
+                            <p class="text-muted mb-1">Klik tombol "Daftar" di pojok kanan atas, lalu isi informasi yang
+                                diperlukan.</p>
+                        </li>
+                        <li class="list-group-item border-0 ps-0">
+                            <strong>Bagaimana cara memesan tiket?</strong>
+                            <p class="text-muted mb-1">Pilih rute perjalanan Anda di bagian pencarian, lalu ikuti
+                                langkah pembayaran.</p>
+                        </li>
+                        <li class="list-group-item border-0 ps-0">
+                            <strong>Apa kebijakan pengembalian dana?</strong>
+                            <p class="text-muted mb-1">Pengembalian dana maksimal 24 jam sebelum keberangkatan dengan
+                                syarat dan ketentuan berlaku.</p>
+                        </li>
+                        <li class="list-group-item border-0 ps-0">
+                            <strong>Apakah data saya aman?</strong>
+                            <p class="text-muted mb-1">Kami menggunakan enkripsi tingkat tinggi untuk melindungi data
+                                Anda.</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Kontak -->
+                <div class="col-md-6" data-aos="fade-right" data-aos-duration="1500">
+                    <h5 class="text-primary fw-bold">Hubungi Kami</h5>
+                    <p class="text-muted small">Untuk pertanyaan lebih lanjut, silakan isi formulir di bawah ini:</p>
+                    <form action="/submit-form" method="POST" class="text-start mx-auto" style="max-width: 400px;">
+                        <div class="mb-3">
+                            <label for="name" class="form-label small fw-bold">Nama Anda</label>
+                            <input type="text" class="form-control" id="name" name="name"
+                                placeholder="Masukkan nama Anda" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label small fw-bold">Email</label>
+                            <input type="email" class="form-control" id="email" name="email"
+                                placeholder="Masukkan email Anda" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label small fw-bold">Pesan</label>
+                            <textarea class="form-control" id="message" name="message" rows="4"
+                                placeholder="Tulis pesan Anda di sini" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100" 
+                            data-aos-duration="1500">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
 
 
 
@@ -135,7 +413,7 @@
                         <p class="text-dark fw-light pt-2">Get E-mail updates about our latest shop and special offers.
                         </p>
                         <div class="input-group input-group-sm mb-1">
-                            <input type="text" class="form-control rounded-0" placeholder="Enter your mail"
+                            <input type="text" class="form-control rounded rounded-0" placeholder="Enter your mail"
                                 aria-label="" aria-describedby="basic-addon1">
                             <span class="input-group-text bg-dark px-3 fw-bold text-light rounded-0"
                                 id="basic-addon1">SUBSCRIBE</span>
@@ -171,6 +449,65 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000, // Durasi animasi
+            once: true,     // Animasi hanya sekali saat scroll
+        });
+
+        // GSAP animations
+        gsap.from(".header-main", {
+            opacity: 0,
+            y: -50,
+            duration: 1.5,
+            ease: "power4.out"
+        });
+
+        gsap.from(".content-search .input-group", {
+            opacity: 0,
+            x: -50,
+            stagger: 0.2,
+            duration: 1,
+            ease: "power4.out"
+        });
+
+        gsap.from(".btn-primary", {
+            opacity: 0,
+            y: 30,
+            duration: 1,
+            delay: 0.6,
+            ease: "power4.out"
+        });
+
+        // GSAP Animation Example
+        gsap.from(".bantuan h2", {
+            opacity: 0,
+            y: -50,
+            duration: 1,
+            ease: "power4.out"
+        });
+
+        gsap.from(".bantuan .list-group-item", {
+            opacity: 0,
+            x: -100,
+            stagger: 0.1,
+            duration: 1.5,
+            ease: "power4.out"
+        });
+
+        gsap.from(".bantuan form", {
+            opacity: 0,
+            scale: 0.8,
+            duration: 1.5,
+            ease: "power4.out",
+            delay: 0.5
+        });
+
+    </script>
 </body>
 
 </html>
