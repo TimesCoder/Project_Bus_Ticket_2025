@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PUTRA PELANGI TICKETING</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/css/bootstrap.min.css">
+  <link
+    href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
+    rel="stylesheet">
+  <link type="text/css" href="style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/details_gambar/gambar4.jpg">
+</head>
+
+<body>
+  <header class="header" style="position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background-color: #fff;"
+    data-aos="fade-down">
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="container">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="nav-item d-flex gap-3">
+            <div class="d-flex gap-2 align-items-center">
+              <i class="fa fa-envelope m-0 p-0"></i>
+              <span class="">info@putrapelangi.com</span>
+            </div>
+          </div>
+          <div class="d-lang">
+            <span class="dropdown-toggle">English</span>
+            <div class="dropdown-menu menu-dropdown position-absolute bg-dark rounded-0 p-1"
+              aria-labelledby="dropdownMenu2">
+              <button class="dropdown-item" type="button">Indonesia</button>
+              <button class="dropdown-item" type="button">English</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <div class="header-main py-2">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a href="index.html" class="navbar-brand fs-3 fw-bold" id="icon">PUTRA PELANGI TICKETING</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto gap-3">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">TICKET BUS ONLINE</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">ABOUT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">BANTUAN</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link"><i class="fa fa-user"></i></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="content-1 py-5" style="margin-top: 80px;">
+    <div class="container">
+      <!-- Breadcrumb -->
+      <nav aria-label="breadcrumb bg-primary" class="mb-2">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none text-dark">Beranda</a>
+            </li>
+            <li class="breadcrumb-item" aria-current="page"><a href="detail-penumpang.html"
+                    class="text-decoration-none text-dark">Detail Penumpang</a></li>
+            <liDetail class="breadcrumb-item active" aria-current="page">Pembayaran</a></li>
+        </ol>
+    </nav>
+  
+      <h3 class="mb-4" data-aos="fade-up" data-aos-delay="100">Pembayaran</h3>
+  
+      <!-- Order Summary Card -->
+      <div id="order-summary" class="card shadow-sm p-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+        <!-- Isi order summary akan dimasukkan melalui JavaScript -->
+      </div>
+  
+      <!-- Pay Button -->
+      <div class="text-center">
+        <button id="pay-button" class="btn btn-danger btn-lg shadow" data-aos="zoom-in" data-aos-delay="300">
+          <i class="fa-solid fa-money-check-dollar"></i> Bayar Sekarang
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+  
+
+
+
+  <footer class="footer" style="background-color: #f3f6fa;">
+    <div class="container pt-5">
+      <div class="row">
+        <!-- Informasi Perusahaan -->
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="footer__about">
+            <div class="footer__about__logo">
+              <h2 class="fw-bold">Putra Pelangi Ticketing</h2>
+            </div>
+            <ul class="list-unstyled fw-light d-flex gap-2 flex-column pt-2">
+              <li>Alamat: Jl. Mawar No.60, Jakarta</li>
+              <li>Telepon: +62 811-1234-5678</li>
+              <li>Email: info@putrapelangi.com</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Tautan Berguna -->
+        <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
+          <div class="footer__widget">
+            <h6 class="fw-bold">Tautan Berguna</h6>
+            <div class="d-flex gap-5 pt-2">
+              <ul class="list-unstyled fw-light d-flex flex-column gap-2">
+                <li><a href="#" class="nav-link">Tentang Kami</a></li>
+                <li><a href="#" class="nav-link">Layanan Kami</a></li>
+                <li><a href="#" class="nav-link">Keamanan Pembayaran</a></li>
+                <li><a href="#" class="nav-link">Informasi Pengiriman</a></li>
+                <li><a href="#" class="nav-link">Kebijakan Privasi</a></li>
+                <li><a href="#" class="nav-link">Peta Situs</a></li>
+              </ul>
+              <ul class="list-unstyled fw-light d-flex flex-column gap-2">
+                <li><a href="#" class="nav-link">Siapa Kami</a></li>
+                <li><a href="#" class="nav-link">Proyek Kami</a></li>
+                <li><a href="#" class="nav-link">Kontak</a></li>
+                <li><a href="#" class="nav-link">Inovasi</a></li>
+                <li><a href="#" class="nav-link">Testimoni</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="col-lg-4 col-md-12">
+          <div class="footer__widget">
+            <h6 class="fw-bold">Berlangganan Newsletter Kami</h6>
+            <p class="text-dark fw-light pt-2">Dapatkan informasi terbaru tentang layanan kami dan penawaran spesial
+              langsung di email Anda.</p>
+            <div class="input-group input-group-sm mb-1">
+              <input type="text" class="form-control rounded rounded-0" placeholder="Masukkan email Anda" aria-label=""
+                aria-describedby="basic-addon1">
+              <span class="input-group-text bg-dark px-3 fw-bold text-light rounded-0"
+                id="basic-addon1">BERLANGGANAN</span>
+            </div>
+            <div class="footer__widget__social pt-4 d-flex gap-3">
+              <a href="#" class="text-dark"><i class="fab fs-5 border fa-facebook"></i></a>
+              <a href="#" class="text-dark"><i class="fab fs-5 border fa-instagram"></i></a>
+              <a href="#" class="text-dark"><i class="fab fs-5 border fa-twitter"></i></a>
+              <a href="#" class="text-dark"><i class="fab fs-5 border fa-pinterest"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer__copyright d-flex justify-content-between align-items-center border-top py-2 mt-3">
+        <div class="footer__copyright__text">
+          <p class="m-0 fw-light" style="font-size: 13px;">
+            Copyright ©
+            <script>document.write(new Date().getFullYear());</script> Semua hak dilindungi |
+            Website ini dibuat dengan <i class="fa fa-heart" aria-hidden="true"></i> oleh <a href="index.html"
+              target="_blank">Putra Pelangi Ticketing</a>
+          </p>
+        </div>
+        <div class="d-flex gap-3">
+          <a href="#" class="text-white"><i class="fab fa-twitter fs-4 text-dark"></i></a>
+          <a href="#" class="text-white"><i class="fab fa-linkedin fs-4 text-dark"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 1000, // Durasi animasi
+      once: true,     // Animasi hanya sekali saat scroll
+    });
+    const orderDetails = JSON.parse(localStorage.getItem("orderDetails"));
+
+    if (orderDetails) {
+      // Tampilkan ringkasan pesanan
+      const summaryDiv = document.getElementById("order-summary");
+      summaryDiv.innerHTML = `
+        <p>Kursi: ${orderDetails.selectedSeats.join(", ")}</p>
+        <p>Total Harga: Rp${orderDetails.totalPrice}</p>
+        <p>Email Kontak: ${orderDetails.contactEmail}</p>
+        ${orderDetails.passengerDetails.map(
+        (passenger, index) =>
+          `<p>Penumpang ${index + 1}: ${passenger.name} (Usia: ${passenger.age})</p>`
+      ).join("")}
+      `;
+    }
+
+    document.getElementById("pay-button").addEventListener("click", () => {
+      alert("Pembayaran Berhasil!");
+      localStorage.removeItem("orderDetails"); // Hapus data setelah pembayaran selesai
+      window.location.href = "index.html"; // Kembali ke halaman utama
+    });
+  </script>
+</body>
+
+</html>
