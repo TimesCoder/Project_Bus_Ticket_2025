@@ -149,12 +149,10 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  /* Untuk memastikan gambar memenuhi seluruh area */
-  height: 40rem;
+  height: 30rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* Tengah vertikal */
 }
 
 .content-box {
@@ -432,4 +430,12 @@ FOOTER
 
 
 
+.popup-details-kursi{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.fa-chair.selected {
+  color: #0d6efd; /* Warna biru untuk kursi yang dipilih */
+}
