@@ -13,25 +13,26 @@
     <link type="text/css" href="style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link rel="icon" type="image/png" href="assets/details_gambar/gambar4.jpg">
-
 </head>
 
 <body>
-    <header class="header" style="position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background-color: #fff;" data-aos="fade-down">
-        <!-- Top Bar -->
+    <header class="header" style="position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background-color: #fff;"
+        data-aos="fade-down">
         <div class="top-bar">
             <div class="container">
                 <div class="d-flex align-items-center justify-content-between">
                     <div class="nav-item d-flex gap-3">
                         <div class="d-flex gap-2 align-items-center">
                             <i class="fa fa-envelope m-0 p-0"></i>
-                            <span class="">info@putrapelangi.com</span>
+                            <span class="border-end pe-3">hello@colorlib.com</span>
                         </div>
+                        <span>Free Shipping for all Order of $99</span>
                     </div>
+
                     <div class="d-lang">
                         <span class="dropdown-toggle">English</span>
-                        <div class="dropdown-menu menu-dropdown position-absolute bg-dark rounded-0 p-1" aria-labelledby="dropdownMenu2">
+                        <div class="dropdown-menu menu-dropdown position-absolute bg-dark rounded-0 p-1"
+                            aria-labelledby="dropdownMenu2">
                             <button class="dropdown-item" type="button">Indonesia</button>
                             <button class="dropdown-item" type="button">English</button>
                         </div>
@@ -39,32 +40,36 @@
                 </div>
             </div>
         </div>
-    
-        <!-- Navbar -->
-        <div class="header-main py-2">
+
+        <!-- search -->
+
+        <div class="header-main py-3">
             <div class="container">
-                <nav class="navbar navbar-expand-lg navbar-light">
-                    <a href="index.html" class="navbar-brand fs-3 fw-bold" id="icon">PUTRA PELANGI TICKETING</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ms-auto gap-3">
-                            <li class="nav-item">
-                                <a class="nav-link" href="index.html">TICKET BUS ONLINE</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="index.html">ABOUT</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="index.html">BANTUAN</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link"><i class="fa fa-user"></i></a>
-                            </li>
-                        </ul>
+                <div class="menu d-flex align-items-center justify-content-between">
+                    <div class="brand-prooduct">
+                        <a href="index.html" class="nav-link fs-3 fw-bold" id="icon">PUTRA PELANGI TICKETING</a>
                     </div>
-                </nav>
+
+                    <div class="header-navbar">
+                        <div class="container">
+                            <ul class="navbar navbar-nav flex-row justify-content-start gap-3 p-1">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html">TICKET BUS ONLINE</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html">ABOUT</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html">BANTUAN</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link"><i class="fa fa-user"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -72,11 +77,10 @@
     <section class="content-1 py-5" style="margin-top: 80px;">
         <div class="container">
             <!-- Breadcrumb -->
-            <nav aria-label="breadcrumb bg-primary" class="mb-2">
+            <nav aria-label="breadcrumb" class="mb-4">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none text-dark">Beranda</a></li>
-                    <li class="breadcrumb-item" aria-current="page"><a href="daftar_bus.html" class="text-decoration-none text-dark">Daftar Bus</a></li>
-                    <liDetail class="breadcrumb-item active" aria-current="page">Detail Bus</a></li>
+                    <li class="breadcrumb-item"><a href="#" class="nav-link">Beranda</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Detail Bus</li>
                 </ol>
             </nav>
 
@@ -98,26 +102,21 @@
                             alt="Gambar Bus Mewah">
                         <!-- Informasi Bus -->
                         <div class="bus-info mb-3">
-                            <p style="font-size: 1.1rem; display: flex; align-items: center;">
-                                <i class="fa-solid fa-bus-alt text-primary fs-5 me-2"></i>
-                                <strong>Jumlah Kursi:</strong> 39 Kursi
+                            <p style="font-size: 1.1rem;">
+                                <i class="fas fa-chair me-2"></i>
+                                <strong>Jumlah Kursi:</strong> 50 Kursi
                             </p>
-                            <p style="font-size: 1.1rem; display: flex; align-items: center;">
-                                <i class="fa-solid fa-wallet text-success fs-5 me-2"></i>
-                                <strong>Harga:</strong> Rp 50.000 per tiket
-                            </p>
-                            <p style="font-size: 1.1rem; display: flex; align-items: center;">
-                                <i class="fa-solid fa-crown text-warning fs-5 me-1"></i>
-                                <strong>Tipe:</strong> VIP
+                            <p style="font-size: 1.1rem;">
+                                <i class="fas fa-tag me-2"></i>
+                                <strong>Harga:</strong> Rp 1.350.000 per tiket
                             </p>
                         </div>
-                        
 
 
 
 
                         <!-- Tombol -->
-                        <button class="btn btn-danger rounded-0 w-100 mt-3" onclick="bookingTicket()"
+                        <button class="btn btn-primary w-100 rounded-0" onclick="bookingTicket()"
                             style="font-size: 1.2rem;">
                             <i class="fas fa-ticket-alt me-2"></i> Pesan Sekarang
                         </button>
@@ -139,7 +138,7 @@
                                 <p class="m-0">Tujuan</p>
                             </div>
                         </div>
-                        <div class="row lokasi-data">
+                        <div class="row">
                             <div class="col-md-2 align-items-center d-flex flex-column strip-1">
                                 <i class="fa-solid fa-location-dot"></i>
                                 <p class="text-secondary">Banda Aceh</p>
@@ -208,7 +207,7 @@
                                 <img src="assets/details_gambar/gambar5.jpg" class="img-fluid" alt="Gambar Bus">
                             </div>
                         </div>
-                        <div class="product-short-desc txt" data-aos="fade-left">
+                        <div class="product-short-desc" data-aos="fade-left">
                             <p>
                                 Nikmati perjalanan yang nyaman dan aman dengan bus kami yang dirancang khusus untuk
                                 memberikan pengalaman terbaik bagi penumpang. Dengan kursi yang luas, fasilitas modern,
@@ -254,26 +253,29 @@
         </div>
     </section>
 
+
+
     <div class="popup-details-kursi mb-5 py-3 overflow-hidden w-100 h-100"
-    style="position: fixed; z-index: 99999999999999999; top: 0; left: 0; background-color: rgba(0, 0, 0, 0.5);">
-        <div class="container bg-light p-3 position-relative"
-            style="max-width: 95%; max-height: 90%; overflow-y: auto;">
+        style="position: fixed; z-index: 99999999999999999; top: 0; left: 0; background-color: rgba(0, 0, 0, 0.5);">
+        <div class="container position-relative">
             <!-- Ikon Close -->
             <button id="close" class="btn-close position-absolute top-0 end-0 mt-3 me-2" onclick="hideDetailsKursi()"
                 aria-label="Close"></button>
 
-            <div class="row">
+
+            <div class="row bg-light p-4">
                 <!-- Bagian Kiri (Peta Kursi) -->
-                <div class="col-lg-8 col-md-12 mb-4 mb-lg-0">
+                <div class="col-lg-8 col-md-12">
                     <div class="text-center">
                         <p class="fw-bold bg-danger text-white py-2 rounded-0">
                             Klik pilihan kursi yang tersedia kemudian lanjut ke bagian pembayaran.
                         </p>
                     </div>
 
-                    <div class="row pt-4">
+                    <!-- Peta Kursi -->
+                    <div class="row">
                         <div class="col-12">
-                            <div class="d-flex justify-content-center flex-wrap gap-3 p-3">
+                            <div class="d-flex justify-content-center gap-3 p-3">
                                 <!-- Simbol Pengguna -->
                                 <div class="d-flex gap-3 border-end pe-2 border-2">
                                     <i class="fa-solid fa-user fs-3 pt-1 text-secondary"></i>
@@ -283,10 +285,11 @@
                                 <div id="seats-container" class="d-flex justify-content-center gap-3 flex-column">
                                     <!-- Kursi akan dirender di sini -->
                                 </div>
+
                             </div>
 
-                            <div class="d-flex flex-column flex-md-row gap-3 pt-5">
-                                <p class="fw-bold">Keterangan Tempat Duduk:</p>
+                            <div class="d-flex gap-3 pt-2">
+                                <p class="fw-bold">Keterangan Tempat Duduk : </p>
                                 <div class="d-flex align-items-center mb-3">
                                     <i class="fa-solid fa-chair text-success me-2"></i>
                                     <span>Tersedia</span>
@@ -310,101 +313,88 @@
 
                 <!-- Bagian Kanan (Keterangan Kursi) -->
                 <div class="col-lg-4 col-md-12">
-                    <div class="border p-4 ringkasan">
-                        <span class="fw-bold">Naik Dari & Turun Di</span>
-                        <div class="location-1 mt-2">
-                            <div class="d-flex justify-content-between">
-                                <span>Medan Sunggal</span>
-                                <span id="waktu-pergi">18:00</span>
-                            </div>
-                            <div>
-                                <span class="text-secondary">Jl. Sunggal No.33, Sei Sikambing B, Kec. Medan Sunggal,
-                                    Kota Medan, Sumatera Utara 20122</span>
-                            </div>
+                    <!-- Bagian Ringkasan -->
+                    <div class="border border-2 p-4 ringkasan">
+                        <h5 class="mb-3">Summary</h5>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Jumlah</span>
+                            <span id="total-seats">0</span>
                         </div>
-                        <div class="location-2 mt-2">
-                            <div class="d-flex justify-content-between">
-                                <span>Loket Putra Pelangi Jakarta</span>
-                                <span id="waktu-sampai">00:00</span>
-                            </div>
-                            <div>
-                                <span class="text-secondary">Jl. Sejajar, Jl. Tol Lkr. Timur Jl. Raya Pulo Gebang No.1,
-                                    RT.11/RW.3, Cakung Tim.,
-                                    Kec. Cakung, Kota Jakarta Timur</span>
-                            </div>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Subtotal</span>
+                            <span id="subtotal-price">Rp0</span>
                         </div>
-
-                        <hr>
-                        <div class="d-flex justify-content-between fw-bold mb-3">
-                            <span>Nomor tempat duduk</span>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>No Kursi</span>
                             <span id="selected-seats">-</span>
                         </div>
                         <hr>
                         <div class="d-flex justify-content-between fw-bold mb-3">
-                            <span>Detail Harga</span>
+                            <span>Total</span>
                             <span id="total-price">Rp0</span>
                         </div>
-                        <button class="btn btn-danger rounded-0 w-100" onclick="addOrder()">Proceed to
+                        <button class="btn btn-danger rounded-0 w-100 mt-3" onclick="addOrder()">Proceed to
                             Checkout</button>
                     </div>
                 </div>
+
             </div>
+
+
+
         </div>
     </div>
-
-
 
 
 
     <footer class="footer" style="background-color: #f3f6fa;">
         <div class="container pt-5">
             <div class="row">
-                <!-- Informasi Perusahaan -->
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="footer__about">
                         <div class="footer__about__logo">
-                            <h2 class="fw-bold">Putra Pelangi Ticketing</h2>
+                            <h2 class="fw-bold">Putra pelangi ticketing</h2>
                         </div>
                         <ul class="list-unstyled fw-light d-flex gap-2 flex-column pt-2">
-                            <li>Alamat: Jl. Mawar No.60, Jakarta</li>
-                            <li>Telepon: +62 811-1234-5678</li>
-                            <li>Email: info@putrapelangi.com</li>
+                            <li>Address: 60-49 Road 11378 New York</li>
+                            <li>Phone: +65 11.188.888</li>
+                            <li>Email: hello@colorlib.com</li>
                         </ul>
                     </div>
                 </div>
-    
-                <!-- Tautan Berguna -->
                 <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
                     <div class="footer__widget">
-                        <h6 class="fw-bold">Tautan Berguna</h6>
+                        <h6 class="fw-bold">Useful Links</h6>
                         <div class="d-flex gap-5 pt-2">
                             <ul class="list-unstyled fw-light d-flex flex-column gap-2">
-                                <li><a href="#" class="nav-link">Tentang Kami</a></li>
-                                <li><a href="#" class="nav-link">Layanan Kami</a></li>
-                                <li><a href="#" class="nav-link">Keamanan Pembayaran</a></li>
-                                <li><a href="#" class="nav-link">Informasi Pengiriman</a></li>
-                                <li><a href="#" class="nav-link">Kebijakan Privasi</a></li>
-                                <li><a href="#" class="nav-link">Peta Situs</a></li>
+                                <li><a href="#" class="nav-link">About Us</a></li>
+                                <li><a href="#" class="nav-link">About Our Shop</a></li>
+                                <li><a href="#" class="nav-link">Secure Shopping</a></li>
+                                <li><a href="#" class="nav-link">Delivery infomation</a></li>
+                                <li><a href="#" class="nav-link">Privacy Policy</a></li>
+                                <li><a href="#" class="nav-link">Our Sitemap</a></li>
                             </ul>
                             <ul class="list-unstyled fw-light d-flex flex-column gap-2">
-                                <li><a href="#" class="nav-link">Siapa Kami</a></li>
-                                <li><a href="#" class="nav-link">Proyek Kami</a></li>
-                                <li><a href="#" class="nav-link">Kontak</a></li>
-                                <li><a href="#" class="nav-link">Inovasi</a></li>
-                                <li><a href="#" class="nav-link">Testimoni</a></li>
+                                <li><a href="#" class="nav-link">Who We Are</a></li>
+                                <li><a href="#" class="nav-link">Our Services</a></li>
+                                <li><a href="#" class="nav-link">Projects</a></li>
+                                <li><a href="#" class="nav-link">Contact</a></li>
+                                <li><a href="#" class="nav-link">Innovation</a></li>
+                                <li><a href="#" class="nav-link">Testimonials</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
-    
-                <!-- Newsletter -->
                 <div class="col-lg-4 col-md-12">
                     <div class="footer__widget">
-                        <h6 class="fw-bold">Berlangganan Newsletter Kami</h6>
-                        <p class="text-dark fw-light pt-2">Dapatkan informasi terbaru tentang layanan kami dan penawaran spesial langsung di email Anda.</p>
+                        <h6 class="fw-bold">Join Our Newsletter Now</h6>
+                        <p class="text-dark fw-light pt-2">Get E-mail updates about our latest shop and special offers.
+                        </p>
                         <div class="input-group input-group-sm mb-1">
-                            <input type="text" class="form-control rounded rounded-0" placeholder="Masukkan email Anda" aria-label="" aria-describedby="basic-addon1">
-                            <span class="input-group-text bg-dark px-3 fw-bold text-light rounded-0" id="basic-addon1">BERLANGGANAN</span>
+                            <input type="text" class="form-control rounded rounded-0" placeholder="Enter your mail"
+                                aria-label="" aria-describedby="basic-addon1">
+                            <span class="input-group-text bg-dark px-3 fw-bold text-light rounded-0"
+                                id="basic-addon1">SUBSCRIBE</span>
                         </div>
                         <div class="footer__widget__social pt-4 d-flex gap-3">
                             <a href="#" class="text-dark"><i class="fab fs-5 border fa-facebook"></i></a>
@@ -415,14 +405,16 @@
                     </div>
                 </div>
             </div>
-    
-            <!-- Copyright -->
+
             <div class="footer__copyright d-flex justify-content-between align-items-center border-top py-2 mt-3">
                 <div class="footer__copyright__text">
                     <p class="m-0 fw-light" style="font-size: 13px;">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         Copyright ©
-                        <script>document.write(new Date().getFullYear());</script> Semua hak dilindungi |
-                        Website ini dibuat dengan <i class="fa fa-heart" aria-hidden="true"></i> oleh <a href="index.html" target="_blank">Putra Pelangi Ticketing</a>
+                        <script>document.write(new Date().getFullYear());</script> All rights reserved |
+                        This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a
+                            href="index.html" target="_blank">Putra pelangi ticketing </a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     </p>
                 </div>
                 <div class="d-flex gap-3">
@@ -431,8 +423,8 @@
                 </div>
             </div>
         </div>
+
     </footer>
-    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>

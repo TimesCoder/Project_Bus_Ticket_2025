@@ -17,50 +17,6 @@ body {
   .container {
     max-width: 1170px;
   }
-
-  .strip-1 {
-    position: relative;
-  }
-
-  .strip-1::after {
-    content: "";
-    position: absolute;
-    top: 12%;
-    right: -57px;
-    display: block;
-    width: 113px;
-    height: 2px;
-
-    background-color: transparent;
-    border-top: 2px dashed #777;
-
-  }
-
-  .strip-1:last-child::after {
-    content: none;
-  }
-
-  .strip-2 {
-    position: relative;
-  }
-
-  .strip-2::after {
-    content: "";
-    position: absolute;
-    top: 27%;
-    right: -233px;
-    transform: translateY(-50%);
-    display: block;
-    width: 275px;
-    height: 2px;
-    background-color: transparent;
-    border-top: 2px dashed #777;
-  }
-
-  .strip-2:last-child::after {
-    content: none;
-  }
-
 }
 
 @media (min-width: 992px) {
@@ -127,12 +83,20 @@ body {
 .container>h2::after {
   content: "";
   display: block;
+  /* Mengubah elemen menjadi blok agar margin bekerja */
   margin: 0 auto;
+  /* Membuat elemen berada di tengah secara horizontal */
   margin-top: 5px;
   width: 200px;
   height: 3px;
   background-color: #3d55df;
 }
+.small-btn {
+  font-size: 12px; /* Ukuran font lebih kecil */
+  padding: 5px 10px; /* Mengurangi padding */
+}
+
+
 
 .quick-view {
   opacity: 0;
@@ -199,22 +163,28 @@ body {
 
 .content-box {
   background-color: rgba(255, 255, 255, 0.8);
+  /* Efek transparan pada kotak */
   padding: 20px;
   border-radius: 8px;
+  /* Membuat sudut kotak menjadi bulat */
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  /* Memberikan bayangan */
 }
 
 .form-control {
   height: 3rem;
+  /* Agar semua input terlihat lebih besar dan rapi */
 }
 
 .btn {
   height: 3rem;
   font-size: 1.1rem;
+  /* Membuat tombol lebih jelas */
 }
 
 .input-group-text {
   font-size: 1.2rem;
+  /* Membesarkan ikon */
 }
 
 
@@ -351,34 +321,86 @@ FOOTER
   ;
 }
 
-/* Responsiveness for smaller screens */
-@media (max-width: 768px) {
-
-  /* Default Garis Horizontal */
-  .strip-1 {
-    position: relative;
-  }
-
-  .strip-1::after {
-    content: none;
-  }
+.strip-1 {
+  position: relative;
 }
 
+.strip-1::after {
+  content: "";
+  position: absolute;
+  top: 12%;
+  right: -57px;
+  /* Sesuaikan nilai ini agar jarak garis sesuai */
+  transform: translateY(-50%);
+  display: block;
+  width: 113px;
+  /* Panjang garis */
+  height: 2px;
+  /* Ketebalan garis */
+  background-color: #777;
+  /* Mengubah warna garis menjadi abu-abu */
+}
 
+.strip-1:last-child::after {
+  content: none;
+  /* Hilangkan garis pada elemen terakhir */
+}
+
+.strip-1 i {
+  color: #df3d3d;
+}
+
+.strip-2 {
+  position: relative;
+}
+
+.strip-2::after {
+  content: "";
+  position: absolute;
+  top: 27%;
+  right: -233px;
+  /* Sesuaikan nilai ini agar jarak garis sesuai */
+  transform: translateY(-50%);
+  display: block;
+  width: 275px;
+  /* Panjang garis */
+  height: 2px;
+  /* Ketebalan garis */
+  background-color: #777;
+  /* Mengubah warna garis menjadi abu-abu */
+}
+
+.strip-2:last-child::after {
+  content: none;
+  /* Hilangkan garis pada elemen terakhir */
+}
+
+.strip-2 p {
+  font-size: 14px;
+  /* Ukuran font waktu yang lebih kecil */
+  color: #333;
+  /* Warna teks waktu */
+  margin: 5px 0;
+  /* Jarak antara waktu dan elemen lain */
+}
+
+.strip-2 i {
+  color: #df3d3d;
+}
 
 
 
 .bus-image {
   height: 300px;
-
+  /* Tinggi gambar */
   width: 100%;
-
+  /* Lebar gambar */
   object-fit: cover;
-
+  /* Memastikan gambar tetap proporsional */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-
+  /* Menambahkan efek bayangan */
   transition: transform 0.3s ease;
-
+  /* Efek transisi saat hover */
 }
 
 .bus-image:hover {
@@ -412,51 +434,91 @@ FOOTER
   /* Membesarkan ikon */
 }
 
-.popup-details-kursi {
-  display: none;
+
+
+.popup-details-kursi{
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-
-.ringkasan .location-1 {
-  position: relative;
-  padding-left: 20px;
+.fa-chair.selected {
+  color: #0d6efd; /* Warna biru untuk kursi yang dipilih */
 }
 
-.ringkasan .location-1::before {
-  content: '';
-  position: absolute;
-  top: 8px;
-  left: 1px;
-  width: 8px;
-  height: 8px;
-  background-color: #000;
-  border-radius: 50%;
+/* Pencarian bus */
+.date-selector .btn.disabled {
+  background-color: #ddd !important;
+  color: #888 !important;
+  cursor: not-allowed;
 }
 
-.ringkasan .location-1::after {
-  content: '';
-  position: absolute;
-  left: 4px;
-  top: 18px;
-  width: 2px;
-  height: calc(100% - 5px);
-  border-left: 2px dotted #ccc;
+.bus-card {
+  flex-direction: column;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.ringkasan .location-2 {
-  position: relative;
-  padding-left: 20px;
+.bus-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background: white;
 }
 
-.ringkasan .location-2::before {
-  content: '';
-  position: absolute;
-  top: 8px;
-  left: 1px;
-  width: 8px;
-  height: 8px;
-  background-color: #000;
-  border-radius: 50%;
+.bus-logo {
+  width: 100px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.bus-info {
+  flex-grow: 1;
+  margin-left: 15px;
+}
+
+.bus-name {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.bus-jenis {
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 3px;
+}
+
+.bus-route,
+.bus-time,
+.bus-price,
+.bus-seats {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 3px;
+}
+
+.bus-price {
+  font-weight: bold;
+  color: #d9534f;
+}
+
+.bus-select button {
+  padding: 8px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.bus-select button:hover {
+  background: #c9302c;
 }

@@ -1,522 +1,796 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="auto">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PUTRA PELANGI TICKETING</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/css/bootstrap.min.css">
     <link
-        href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
-        rel="stylesheet">
-    <link type="text/css" href="style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="assets/details_gambar/gambar4.jpg">
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
+      rel="stylesheet"
+    />
+    <link type="text/css" href="style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/details_gambar/gambar4.jpg"
+    />
+  </head>
 
-
-</head>
-
-<body>
-    <div id="popup" class="modal overflow-hidden" style="z-index: 999999999;">
-        <div class="modal-content container rounded-0 overflow-hidden">
-            <span id="close" class="close" onclick="hideModal()">&times;</span>
-            <!-- Login Form -->
-            <div id="loginForm">
-                <h2 class="text-center text-dark fw-bold mb-4">Login</h2>
-                <form class="login-form">
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="email" placeholder="example@gmail.com">
-                    </div>
-                    <div class="mb-3">
-                        <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="Enter your password">
-                    </div>
-                    <div class="d-flex justify-content-between align-items-center mb-3">
-                        <div>
-                            <input type="checkbox" id="remember-me">
-                            <label for="remember-me" class="form-check-label">Remember me</label>
-                        </div>
-                        <a href="#" class="text-decoration-none text-danger">Forgot Password?</a>
-                    </div>
-                    <div class="d-grid gap-2 mb-3">
-                        <button class="btn btn-outline-dark rounded-0 d-flex align-items-center justify-content-center">
-                            <a href="#" class="text-decoration-none text-dark"><i class="fab fa-google"></i> Login With
-                                Google</a>
-                        </button>
-                    </div>
-                    <button type="submit" class="btn btn-dark w-100 rounded-0">Login</button>
-                </form>
-                <p class="text-center mt-3">
-                    Belum punya akun? <span class="switch-btn text-danger" onclick="showRegister()">Register</span>
-                </p>
+  <body>
+    <div id="popup" class="modal overflow-hidden" style="z-index: 999999999">
+      <div class="modal-content container rounded-0 overflow-hidden">
+        <span id="close" class="close" onclick="hideModal()">&times;</span>
+        <!-- Login Form -->
+        <div id="loginForm">
+          <h2 class="text-center text-dark fw-bold mb-4">Login</h2>
+          <form class="login-form">
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="example@gmail.com"
+              />
             </div>
-
-            <!-- Register Form -->
-            <div id="registerForm" class="swipe-container" style="display: none;">
-                <h2 class="text-center text-dark fw-bold mb-4">Register</h2>
-                <form class="register-form">
-                    <div class="mb-3">
-                        <label for="register-email" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="register-email" placeholder="example@gmail.com">
-                    </div>
-                    <div class="mb-3">
-                        <label for="register-password" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="register-password"
-                            placeholder="Enter your password">
-                    </div>
-                    <div class="mb-3">
-                        <label for="confirm-password" class="form-label">Confirm Password</label>
-                        <input type="password" class="form-control" id="confirm-password"
-                            placeholder="Confirm your password">
-                    </div>
-                    <button type="submit" class="btn btn-dark w-100 rounded-0">Register</button>
-                </form>
-                <p class="text-center mt-3">
-                    Sudah punya akun? <span class="switch-btn text-danger" onclick="showLogin()">Login</span>
-                </p>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                placeholder="Enter your password"
+              />
             </div>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <div>
+                <input type="checkbox" id="remember-me" />
+                <label for="remember-me" class="form-check-label"
+                  >Remember me</label
+                >
+              </div>
+              <a href="#" class="text-decoration-none text-danger"
+                >Forgot Password?</a
+              >
+            </div>
+            <div class="d-grid gap-2 mb-3">
+              <button
+                class="btn btn-outline-dark rounded-0 d-flex align-items-center justify-content-center"
+              >
+                <a href="#" class="text-decoration-none text-dark"
+                  ><i class="fab fa-google"></i> Login With Google</a
+                >
+              </button>
+            </div>
+            <button type="submit" class="btn btn-dark w-100 rounded-0">
+              Login
+            </button>
+          </form>
+          <p class="text-center mt-3">
+            Belum punya akun?
+            <span class="switch-btn text-danger" onclick="showRegister()"
+              >Register</span
+            >
+          </p>
         </div>
+
+        <!-- Register Form -->
+        <div id="registerForm" class="swipe-container" style="display: none">
+          <h2 class="text-center text-dark fw-bold mb-4">Register</h2>
+          <form class="register-form">
+            <div class="mb-3">
+              <label for="register-email" class="form-label"
+                >Email address</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="register-email"
+                placeholder="example@gmail.com"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="register-password" class="form-label">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="register-password"
+                placeholder="Enter your password"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="confirm-password" class="form-label"
+                >Confirm Password</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                id="confirm-password"
+                placeholder="Confirm your password"
+              />
+            </div>
+            <button type="submit" class="btn btn-dark w-100 rounded-0">
+              Register
+            </button>
+          </form>
+          <p class="text-center mt-3">
+            Sudah punya akun?
+            <span class="switch-btn text-danger" onclick="showLogin()"
+              >Login</span
+            >
+          </p>
+        </div>
+      </div>
     </div>
 
-    <header class="header" style="position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background-color: #fff;"
-        data-aos="fade-down">
-        <!-- Top Bar -->
-        <div class="top-bar">
-            <div class="container">
-                <div class="d-flex align-items-center justify-content-between">
-                    <div class="nav-item d-flex gap-3">
-                        <div class="d-flex gap-2 align-items-center">
-                            <i class="fa fa-envelope m-0 p-0"></i>
-                            <span class="">info@putrapelangi.com</span>
-                        </div>
-                    </div>
-                    <div class="d-lang">
-                        <span class="dropdown-toggle">English</span>
-                        <div class="dropdown-menu menu-dropdown position-absolute bg-dark rounded-0 p-1"
-                            aria-labelledby="dropdownMenu2">
-                            <button class="dropdown-item" type="button">Indonesia</button>
-                            <button class="dropdown-item" type="button">English</button>
-                        </div>
-                    </div>
-                </div>
+    <header
+      class="header"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: #fff;
+      "
+      data-aos="fade-down"
+    >
+      <!-- Top Bar -->
+      <div class="top-bar">
+        <div class="container">
+          <div class="d-flex align-items-center justify-content-between">
+            <div class="nav-item d-flex gap-3">
+              <div class="d-flex gap-2 align-items-center">
+                <i class="fa fa-envelope m-0 p-0"></i>
+                <span class="">info@putrapelangi.com</span>
+              </div>
             </div>
+            <div class="d-lang">
+              <span class="dropdown-toggle">English</span>
+              <div
+                class="dropdown-menu menu-dropdown position-absolute bg-dark rounded-0 p-1"
+                aria-labelledby="dropdownMenu2"
+              >
+                <button class="dropdown-item" type="button">Indonesia</button>
+                <button class="dropdown-item" type="button">English</button>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
 
-        <!-- Navbar -->
-        <div class="header-main py-2">
-            <div class="container">
-                <nav class="navbar navbar-expand-lg navbar-light">
-                    <a href="index.html" class="navbar-brand fs-3 fw-bold" id="icon">PUTRA PELANGI TICKETING</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ms-auto gap-3">
-                            <li class="nav-item">
-                                <a class="nav-link" href="index.html">TICKET BUS ONLINE</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="index.html">ABOUT</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="index.html">BANTUAN</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link"><i class="fa fa-user"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
+      <!-- Navbar -->
+      <div class="header-main py-2">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <a href="index.html" class="navbar-brand fs-3 fw-bold" id="icon"
+              >PUTRA PELANGI TICKETING</a
+            >
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto gap-3">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">TICKET BUS ONLINE</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#about">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#bantuan">BANTUAN</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link"><i class="fa fa-user"></i></a>
+                </li>
+              </ul>
             </div>
+          </nav>
         </div>
+      </div>
     </header>
 
-
-
-    <section class="content-search " style="margin-top: 120px;">
-        <div class="content-box">
-            <div class="container">
-                <div class="row g-3 align-items-center justify-content-center">
-                    <!-- Input "Dari" -->
-                    <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
-                        <div class="input-group">
-                            <span class="input-group-text bg-light text-danger rounded-0">
-                                <i class="fas fa-city"></i>
-                            </span>
-                            <div class="form-floating">
-                                <input type="text" id="dari" class="form-control rounded-0" placeholder="Dari">
-                                <label for="dari">Dari</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Input "Ke" -->
-                    <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
-                        <div class="input-group">
-                            <span class="input-group-text bg-light text-danger rounded-0">
-                                <i class="fas fa-city"></i>
-                            </span>
-                            <div class="form-floating">
-                                <input type="text" id="ke" class="form-control rounded-0" placeholder="Ke">
-                                <label for="ke">Ke</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Input "Tanggal Pergi" -->
-                    <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
-                        <div class="input-group">
-                            <span class="input-group-text bg-light text-danger rounded-0">
-                                <i class="fas fa-calendar-alt"></i>
-                            </span>
-                            <div class="form-floating">
-                                <input type="date" id="tanggal-pergi" class="form-control rounded-0"
-                                    placeholder="Tanggal Pergi">
-                                <label for="tanggal-pergi">Tanggal Pergi</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Input "Tanggal Pulang" -->
-                    <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
-                        <div class="input-group">
-                            <span class="input-group-text bg-light text-danger rounded-0">
-                                <i class="fas fa-calendar-alt"></i>
-                            </span>
-                            <div class="form-floating">
-                                <input type="date" id="tanggal-pulang" class="form-control rounded-0"
-                                    placeholder="Tanggal Pulang">
-                                <label for="tanggal-pulang">Tanggal Pulang</label>
-                            </div>
-                        </div>
-                    </div>
+    <section class="content-search" style="margin-top: 120px">
+      <div class="content-box">
+        <div class="container">
+          <div class="row g-3 align-items-center justify-content-center">
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+              <div class="input-group">
+                <span class="input-group-text bg-light text-danger rounded-0">
+                  <i class="fas fa-city"></i>
+                </span>
+                <div class="form-floating">
+                  <select id="dari" class="form-control rounded-0">
+                    <option value="">Pilih Kota Asal</option>
+                    <option value="Medan">Medan</option>
+                    <option value="B.Aceh">Banda Aceh</option>
+                    <option value="Pekanbaru">Pekanbaru</option>
+                    <option value="Lhokseumawe">Lhokseumawe</option>
+                    <option value="Krueng Geukueh">Krueng Geukueh</option>
+                    <option value="Bireuen">Bireuen</option>
+                    <option value="Sigli">Sigli</option>
+                    <option value="Takengon">Takengon</option>
+                    <option value="B.Batu">Batu Bara</option>
+                    <option value="Pk. Kerinci">Pangkalan Kerinci</option>
+                    <option value="Jambi">Jambi</option>
+                    <option value="Palembang">Palembang</option>
+                    <option value="Lampung">Lampung</option>
+                    <option value="Jakarta">Jakarta</option>
+                    <option value="Bogor">Bogor</option>
+                    <option value="Bandung">Bandung</option>
+                  </select>
+                  <label for="dari">Dari</label>
                 </div>
-
-                <!-- Tombol Cari -->
-                <div class="row mt-3 justify-content-center">
-                    <div class="col-md-3 text-center" data-aos="zoom-in" data-aos-delay="500">
-                        <button class="btn btn-danger w-100 rounded-0 ">
-                            <i class="fas fa-search"></i> Cari Bus
-                        </button>
-                    </div>
-                </div>
+              </div>
             </div>
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+              <div class="input-group">
+                <span class="input-group-text bg-light text-danger rounded-0">
+                  <i class="fas fa-city"></i>
+                </span>
+                <div class="form-floating">
+                  <select id="ke" class="form-control rounded-0">
+                    <option value="">Pilih Kota Tujuan</option>
+                    <option value="Medan">Medan</option>
+                    <option value="B.Aceh">Banda Aceh</option>
+                    <option value="Pekanbaru">Pekanbaru</option>
+                    <option value="Lhokseumawe">Lhokseumawe</option>
+                    <option value="Krueng Geukueh">Krueng Geukueh</option>
+                    <option value="Bireuen">Bireuen</option>
+                    <option value="Sigli">Sigli</option>
+                    <option value="Takengon">Takengon</option>
+                    <option value="B.Batu">Batu Bara</option>
+                    <option value="Pk. Kerinci">Pangkalan Kerinci</option>
+                    <option value="Jambi">Jambi</option>
+                    <option value="Palembang">Palembang</option>
+                    <option value="Lampung">Lampung</option>
+                    <option value="Jakarta">Jakarta</option>
+                    <option value="Bogor">Bogor</option>
+                    <option value="Bandung">Bandung</option>
+                  </select>
+                  <label for="ke">Ke</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+              <div class="input-group">
+                <span class="input-group-text bg-light text-danger rounded-0">
+                  <i class="fas fa-calendar-alt"></i>
+                </span>
+                <div class="form-floating">
+                  <input
+                    type="date"
+                    id="tanggal-pergi"
+                    class="form-control rounded-0"
+                  />
+                  <label for="tanggal-pergi">Tanggal Pergi</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
+              <div class="input-group">
+                <span class="input-group-text bg-light text-danger rounded-0">
+                  <i class="fas fa-calendar-alt"></i>
+                </span>
+                <div class="form-floating">
+                  <input
+                    type="date"
+                    id="tanggal-pulang"
+                    class="form-control rounded-0"
+                  />
+                  <label for="tanggal-pulang">Tanggal Pulang</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-3 justify-content-center">
+            <div
+              class="col-md-3 text-center"
+              data-aos="zoom-in"
+              data-aos-delay="500"
+            >
+              <button id="cariBus" class="btn btn-danger w-100 rounded-0">
+                <i class="fas fa-search"></i>
+                <a
+                  href="pencarian_bus.html"
+                  class="text-decoration-none text-white"
+                  >Cari Bus</a
+                >
+              </button>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <section class="py-4">
-        <div class="container text-center">
-            <h2 class="mb-3 text-uppercase fw-bold " data-aos="fade-up">Fasilitas Bus</h2>
-            <div class="row text-start">
-                <!-- Fasilitas 1 -->
-                <div class="col-xl-3 col-lg-4 col-md-6 col-12" data-aos="fade-left" data-aos-duration="1000"
-                    data-aos-delay="200">
-                    <div class="single-product card rounded-1">
-                        <div class="product-img position-relative" id="gambar-content">
-                            <a href="product-detail.html">
-                                <img src="https://images.pexels.com/photos/29631639/pexels-photo-29631639/free-photo-of-pemandangan-dalam-bus-umum-yang-disinari-matahari.jpeg?auto=compress&cs=tinysrgb&w=600"
-                                    class="img-fluid rounded-0" alt="Fasilitas WiFi">
-                            </a>
-                        </div>
-                        <div class="product-content p-2">
-                            <h3 class="h6 pt-2">
-                                <a href="product-detail.html" class="text-dark text-decoration-none">WiFi Gratis</a>
-                            </h3>
-                            <p class="text-muted small">
-                                Nikmati akses internet tanpa batas selama perjalanan.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Fasilitas 2 -->
-                <div class="col-xl-3 col-lg-4 col-md-6 col-12" data-aos="fade-left" data-aos-duration="1000"
-                    data-aos-delay="400">
-                    <div class="single-product card rounded-1">
-                        <div class="product-img position-relative" id="gambar-content">
-                            <a href="product-detail.html">
-                                <img src="https://images.pexels.com/photos/11998040/pexels-photo-11998040.jpeg?auto=compress&cs=tinysrgb&w=600"
-                                    class="img-fluid rounded-0" alt="Fasilitas Kursi">
-                            </a>
-                        </div>
-                        <div class="product-content p-2">
-                            <h3 class="h6 pt-2">
-                                <a href="product-detail.html" class="text-dark text-decoration-none">Kursi Ergonomis</a>
-                            </h3>
-                            <p class="text-muted small">
-                                Kursi nyaman dengan pengaturan posisi yang fleksibel.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Fasilitas 3 -->
-                <div class="col-xl-3 col-lg-4 col-md-6 col-12" data-aos="fade-left" data-aos-duration="1000"
-                    data-aos-delay="600">
-                    <div class="single-product card rounded-1">
-                        <div class="product-img position-relative" id="gambar-content">
-                            <a href="product-detail.html">
-                                <img src="https://images.pexels.com/photos/11998040/pexels-photo-11998040.jpeg?auto=compress&cs=tinysrgb&w=600"
-                                    class="img-fluid rounded-0" alt="Fasilitas Hiburan">
-                            </a>
-                        </div>
-                        <div class="product-content p-2">
-                            <h3 class="h6 pt-2">
-                                <a href="product-detail.html" class="text-dark text-decoration-none">Hiburan
-                                    Multimedia</a>
-                            </h3>
-                            <p class="text-muted small">
-                                Layar TV pribadi dengan pilihan film dan musik terbaru.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Fasilitas 4 -->
-                <div class="col-xl-3 col-lg-4 col-md-6 col-12" data-aos="fade-left" data-aos-duration="1000"
-                    data-aos-delay="800">
-                    <div class="single-product card rounded-1">
-                        <div class="product-img position-relative" id="gambar-content">
-                            <a href="product-detail.html">
-                                <img src="https://images.pexels.com/photos/29631639/pexels-photo-29631639/free-photo-of-pemandangan-dalam-bus-umum-yang-disinari-matahari.jpeg?auto=compress&cs=tinysrgb&w=600"
-                                    class="img-fluid rounded-0" alt="Fasilitas AC">
-                            </a>
-                        </div>
-                        <div class="product-content p-2">
-                            <h3 class="h6 pt-2">
-                                <a href="product-detail.html" class="text-dark text-decoration-none">AC Dingin</a>
-                            </h3>
-                            <p class="text-muted small">
-                                Suasana nyaman dengan pendingin udara sepanjang perjalanan.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+      <div class="container text-center">
+        <h2 class="mb-3 text-uppercase fw-bold" data-aos="fade-up">
+          Fasilitas Bus
+        </h2>
+        <div class="row text-start">
+          <!-- Fasilitas 1 -->
+          <div
+            class="col-xl-3 col-lg-4 col-md-6 col-12"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+          >
+            <div class="single-product card rounded-1">
+              <div class="product-img position-relative" id="gambar-content">
+                <a href="product-detail.html">
+                  <img
+                    src="https://images.pexels.com/photos/29631639/pexels-photo-29631639/free-photo-of-pemandangan-dalam-bus-umum-yang-disinari-matahari.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    class="img-fluid rounded-0"
+                    alt="Fasilitas WiFi"
+                  />
+                </a>
+              </div>
+              <div class="product-content p-2">
+                <h3 class="h6 pt-2">
+                  <a
+                    href="product-detail.html"
+                    class="text-dark text-decoration-none"
+                    >WiFi Gratis</a
+                  >
+                </h3>
+                <p class="text-muted small">
+                  Nikmati akses internet tanpa batas selama perjalanan.
+                </p>
+              </div>
             </div>
+          </div>
+
+          <!-- Fasilitas 2 -->
+          <div
+            class="col-xl-3 col-lg-4 col-md-6 col-12"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            data-aos-delay="400"
+          >
+            <div class="single-product card rounded-1">
+              <div class="product-img position-relative" id="gambar-content">
+                <a href="product-detail.html">
+                  <img
+                    src="https://images.pexels.com/photos/11998040/pexels-photo-11998040.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    class="img-fluid rounded-0"
+                    alt="Fasilitas Kursi"
+                  />
+                </a>
+              </div>
+              <div class="product-content p-2">
+                <h3 class="h6 pt-2">
+                  <a
+                    href="product-detail.html"
+                    class="text-dark text-decoration-none"
+                    >Kursi Ergonomis</a
+                  >
+                </h3>
+                <p class="text-muted small">
+                  Kursi nyaman dengan pengaturan posisi yang fleksibel.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fasilitas 3 -->
+          <div
+            class="col-xl-3 col-lg-4 col-md-6 col-12"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            data-aos-delay="600"
+          >
+            <div class="single-product card rounded-1">
+              <div class="product-img position-relative" id="gambar-content">
+                <a href="product-detail.html">
+                  <img
+                    src="https://images.pexels.com/photos/11998040/pexels-photo-11998040.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    class="img-fluid rounded-0"
+                    alt="Fasilitas Hiburan"
+                  />
+                </a>
+              </div>
+              <div class="product-content p-2">
+                <h3 class="h6 pt-2">
+                  <a
+                    href="product-detail.html"
+                    class="text-dark text-decoration-none"
+                    >Hiburan Multimedia</a
+                  >
+                </h3>
+                <p class="text-muted small">
+                  Layar TV pribadi dengan pilihan film dan musik terbaru.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fasilitas 4 -->
+          <div
+            class="col-xl-3 col-lg-4 col-md-6 col-12"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            data-aos-delay="800"
+          >
+            <div class="single-product card rounded-1">
+              <div class="product-img position-relative" id="gambar-content">
+                <a href="product-detail.html">
+                  <img
+                    src="https://images.pexels.com/photos/29631639/pexels-photo-29631639/free-photo-of-pemandangan-dalam-bus-umum-yang-disinari-matahari.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    class="img-fluid rounded-0"
+                    alt="Fasilitas AC"
+                  />
+                </a>
+              </div>
+              <div class="product-content p-2">
+                <h3 class="h6 pt-2">
+                  <a
+                    href="product-detail.html"
+                    class="text-dark text-decoration-none"
+                    >AC Dingin</a
+                  >
+                </h3>
+                <p class="text-muted small">
+                  Suasana nyaman dengan pendingin udara sepanjang perjalanan.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
+    <section class="about-us bg-light py-5" id="about">
+      <div class="container text-center">
+        <h2 class="mb-4 text-uppercase fw-bold" data-aos="fade-up" >
+          Tentang Kami
+        </h2>
+        <p class="text-muted" data-aos="fade-up" data-aos-delay="100">
+          Putra Pelangi Ticketing adalah platform pemesanan tiket bus online
+          yang dirancang untuk memberikan pengalaman perjalanan yang lebih
+          mudah, nyaman, dan aman bagi setiap pelanggan. Dengan antarmuka yang
+          ramah pengguna dan teknologi canggih, kami hadir untuk menjawab
+          kebutuhan transportasi Anda ke berbagai destinasi di Indonesia.
+        </p>
+        <p class="text-muted" data-aos="fade-up" data-aos-delay="200">
+          Kami memahami pentingnya perjalanan yang lancar dan tanpa hambatan,
+          sehingga kami berkomitmen untuk selalu meningkatkan layanan kami agar
+          sesuai dengan harapan Anda. Dengan Putra Pelangi Ticketing, Anda dapat
+          memesan tiket kapan saja dan di mana saja, dengan harga yang
+          kompetitif dan proses yang sangat mudah.
+        </p>
+        <div class="row mt-5">
+          <!-- Sejarah -->
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="card shadow-sm h-100 border-0">
+              <div class="card-body">
+                <h5 class="text-danger fw-bold mb-3">Sejarah Kami</h5>
+                <p class="text-muted small">
+                  Berdiri sejak tahun 2020, Putra Pelangi Ticketing didirikan
+                  dengan tujuan memberikan solusi pemesanan tiket bus yang
+                  modern di era digital. Kami bermula dari semangat untuk
+                  menghubungkan orang-orang dengan berbagai tujuan, dan kini
+                  telah menjadi salah satu platform terpercaya di Indonesia.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Layanan -->
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="card shadow-sm h-100 border-0">
+              <div class="card-body">
+                <h5 class="text-danger fw-bold mb-3">Layanan Kami</h5>
+                <p class="text-muted small">
+                  Kami menawarkan berbagai layanan, termasuk pemesanan tiket bus
+                  online, informasi jadwal perjalanan, ulasan operator bus,
+                  hingga pembaruan rute terbaru. Semua ini kami sediakan untuk
+                  memastikan perjalanan Anda terasa lebih aman dan nyaman.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Komitmen -->
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="500">
+            <div class="card shadow-sm h-100 border-0">
+              <div class="card-body">
+                <h5 class="text-danger fw-bold mb-3">Komitmen Kami</h5>
+                <p class="text-muted small">
+                  Kepuasan pelanggan adalah prioritas utama kami. Kami
+                  berkomitmen untuk menyediakan layanan yang dapat diandalkan,
+                  mendukung pengalaman perjalanan yang lebih baik, dan terus
+                  berkembang mengikuti kebutuhan pelanggan serta kemajuan
+                  teknologi.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-
-    <section class="about-us bg-light py-5">
-        <div class="container text-center">
-            <h2 class="mb-4 text-uppercase fw-bold" data-aos="fade-up">Tentang Kami</h2>
-            <p class="text-muted" data-aos="fade-up" data-aos-delay="100">
-                Putra Pelangi Ticketing adalah platform pemesanan tiket bus online yang dirancang untuk memberikan
-                pengalaman perjalanan yang lebih mudah, nyaman, dan aman bagi setiap pelanggan. Dengan antarmuka yang
-                ramah pengguna dan teknologi canggih, kami hadir untuk menjawab kebutuhan transportasi Anda ke berbagai
-                destinasi di Indonesia.
+    <section class="bantuan py-5" data-aos="fade-up" id="bantuan">
+      <div class="container text-center">
+        <h2
+          class="mb-3 text-uppercase fw-bold"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+        >
+          Bantuan & Dukungan
+        </h2>
+        <p
+          class="text-muted"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          data-aos-delay="200"
+        >
+          Jika Anda memiliki pertanyaan atau membutuhkan bantuan, tim kami siap
+          membantu Anda. Lihat pertanyaan umum di bawah atau hubungi kami
+          langsung.
+        </p>
+        <div class="row mt-4">
+          <!-- FAQ -->
+          <div
+            class="col-md-6 mb-4"
+            data-aos="fade-left"
+            data-aos-duration="1500"
+          >
+            <h5 class="text-danger fw-bold">Pertanyaan Umum</h5>
+            <ul
+              class="list-group small text-start mx-auto"
+              style="max-width: 400px"
+            >
+              <li class="list-group-item border-0 ps-0">
+                <strong>Bagaimana cara mendaftar?</strong>
+                <p class="text-muted mb-1">
+                  Klik tombol "Daftar" di pojok kanan atas, lalu isi informasi
+                  yang diperlukan.
+                </p>
+              </li>
+              <li class="list-group-item border-0 ps-0">
+                <strong>Bagaimana cara memesan tiket?</strong>
+                <p class="text-muted mb-1">
+                  Pilih rute perjalanan Anda di bagian pencarian, lalu ikuti
+                  langkah pembayaran.
+                </p>
+              </li>
+              <li class="list-group-item border-0 ps-0">
+                <strong>Apa kebijakan pengembalian dana?</strong>
+                <p class="text-muted mb-1">
+                  Pengembalian dana maksimal 24 jam sebelum keberangkatan dengan
+                  syarat dan ketentuan berlaku.
+                </p>
+              </li>
+              <li class="list-group-item border-0 ps-0">
+                <strong>Apakah data saya aman?</strong>
+                <p class="text-muted mb-1">
+                  Kami menggunakan enkripsi tingkat tinggi untuk melindungi data
+                  Anda.
+                </p>
+              </li>
+            </ul>
+          </div>
+          <!-- Kontak -->
+          <div class="col-md-6" data-aos="fade-right" data-aos-duration="1500">
+            <h5 class="text-danger fw-bold">Hubungi Kami</h5>
+            <p class="text-muted small">
+              Untuk pertanyaan lebih lanjut, silakan isi formulir di bawah ini:
             </p>
-            <p class="text-muted" data-aos="fade-up" data-aos-delay="200">
-                Kami memahami pentingnya perjalanan yang lancar dan tanpa hambatan, sehingga kami berkomitmen untuk
-                selalu meningkatkan layanan kami agar sesuai dengan harapan Anda. Dengan Putra Pelangi Ticketing, Anda
-                dapat memesan tiket kapan saja dan di mana saja, dengan harga yang kompetitif dan proses yang sangat
-                mudah.
-            </p>
-            <div class="row mt-5">
-                <!-- Sejarah -->
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card shadow-sm h-100 border-0">
-                        <div class="card-body">
-                            <h5 class="text-danger fw-bold mb-3">Sejarah Kami</h5>
-                            <p class="text-muted small">
-                                Berdiri sejak tahun 2020, Putra Pelangi Ticketing didirikan dengan tujuan memberikan
-                                solusi pemesanan tiket bus yang modern di era digital. Kami bermula dari semangat untuk
-                                menghubungkan orang-orang dengan berbagai tujuan, dan kini telah menjadi salah satu
-                                platform terpercaya di Indonesia.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Layanan -->
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400">
-                    <div class="card shadow-sm h-100 border-0">
-                        <div class="card-body">
-                            <h5 class="text-danger fw-bold mb-3">Layanan Kami</h5>
-                            <p class="text-muted small">
-                                Kami menawarkan berbagai layanan, termasuk pemesanan tiket bus online, informasi jadwal
-                                perjalanan, ulasan operator bus, hingga pembaruan rute terbaru. Semua ini kami sediakan
-                                untuk memastikan perjalanan Anda terasa lebih aman dan nyaman.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Komitmen -->
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="500">
-                    <div class="card shadow-sm h-100 border-0">
-                        <div class="card-body">
-                            <h5 class="text-danger fw-bold mb-3">Komitmen Kami</h5>
-                            <p class="text-muted small">
-                                Kepuasan pelanggan adalah prioritas utama kami. Kami berkomitmen untuk menyediakan
-                                layanan yang dapat diandalkan, mendukung pengalaman perjalanan yang lebih baik, dan
-                                terus berkembang mengikuti kebutuhan pelanggan serta kemajuan teknologi.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <form
+              action="/submit-form"
+              method="POST"
+              class="text-start mx-auto"
+              style="max-width: 400px"
+            >
+              <div class="mb-3">
+                <label for="name" class="form-label small fw-bold"
+                  >Nama Anda</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  placeholder="Masukkan nama Anda"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label small fw-bold"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="Masukkan email Anda"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label small fw-bold"
+                  >Pesan</label
+                >
+                <textarea
+                  class="form-control"
+                  id="message"
+                  name="message"
+                  rows="4"
+                  placeholder="Tulis pesan Anda di sini"
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="btn btn-danger rounded-0 w-100"
+                data-aos-duration="1500"
+              >
+                Kirim Pesan
+              </button>
+            </form>
+          </div>
         </div>
+      </div>
     </section>
 
+    <footer class="footer" style="background-color: #f3f6fa">
+      <div class="container pt-5">
+        <div class="row">
+          <!-- Informasi Perusahaan -->
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="footer__about">
+              <div class="footer__about__logo">
+                <h2 class="fw-bold">Putra Pelangi Ticketing</h2>
+              </div>
+              <ul class="list-unstyled fw-light d-flex gap-2 flex-column pt-2">
+                <li>Alamat: Jl. Mawar No.60, Jakarta</li>
+                <li>Telepon: +62 811-1234-5678</li>
+                <li>Email: info@putrapelangi.com</li>
+              </ul>
+            </div>
+          </div>
 
-    <section class="bantuan py-5" data-aos="fade-up">
-        <div class="container text-center">
-            <h2 class="mb-3 text-uppercase fw-bold" data-aos="fade-up" data-aos-duration="1500">Bantuan & Dukungan</h2>
-            <p class="text-muted" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
-                Jika Anda memiliki pertanyaan atau membutuhkan bantuan, tim kami siap membantu Anda. Lihat pertanyaan
-                umum di bawah atau hubungi kami langsung.
+          <!-- Tautan Berguna -->
+          <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
+            <div class="footer__widget">
+              <h6 class="fw-bold">Tautan Berguna</h6>
+              <div class="d-flex gap-5 pt-2">
+                <ul class="list-unstyled fw-light d-flex flex-column gap-2">
+                  <li><a href="#" class="nav-link">Tentang Kami</a></li>
+                  <li><a href="#" class="nav-link">Layanan Kami</a></li>
+                  <li><a href="#" class="nav-link">Keamanan Pembayaran</a></li>
+                  <li><a href="#" class="nav-link">Informasi Pengiriman</a></li>
+                  <li><a href="#" class="nav-link">Kebijakan Privasi</a></li>
+                  <li><a href="#" class="nav-link">Peta Situs</a></li>
+                </ul>
+                <ul class="list-unstyled fw-light d-flex flex-column gap-2">
+                  <li><a href="#" class="nav-link">Siapa Kami</a></li>
+                  <li><a href="#" class="nav-link">Proyek Kami</a></li>
+                  <li><a href="#" class="nav-link">Kontak</a></li>
+                  <li><a href="#" class="nav-link">Inovasi</a></li>
+                  <li><a href="#" class="nav-link">Testimoni</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="col-lg-4 col-md-12">
+            <div class="footer__widget">
+              <h6 class="fw-bold">Berlangganan Newsletter Kami</h6>
+              <p class="text-dark fw-light pt-2">
+                Dapatkan informasi terbaru tentang layanan kami dan penawaran
+                spesial langsung di email Anda.
+              </p>
+              <div class="input-group input-group-sm mb-1">
+                <input
+                  type="text"
+                  class="form-control rounded rounded-0"
+                  placeholder="Masukkan email Anda"
+                  aria-label=""
+                  aria-describedby="basic-addon1"
+                />
+                <span
+                  class="input-group-text bg-dark px-3 fw-bold text-light rounded-0"
+                  id="basic-addon1"
+                  >BERLANGGANAN</span
+                >
+              </div>
+              <div class="footer__widget__social pt-4 d-flex gap-3">
+                <a href="#" class="text-dark"
+                  ><i class="fab fs-5 border fa-facebook"></i
+                ></a>
+                <a href="#" class="text-dark"
+                  ><i class="fab fs-5 border fa-instagram"></i
+                ></a>
+                <a href="#" class="text-dark"
+                  ><i class="fab fs-5 border fa-twitter"></i
+                ></a>
+                <a href="#" class="text-dark"
+                  ><i class="fab fs-5 border fa-pinterest"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div
+          class="footer__copyright d-flex justify-content-between align-items-center border-top py-2 mt-3"
+        >
+          <div class="footer__copyright__text">
+            <p class="m-0 fw-light" style="font-size: 13px">
+              Copyright ©
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              Semua hak dilindungi | Website ini dibuat dengan
+              <i class="fa fa-heart" aria-hidden="true"></i> oleh
+              <a href="index.html" target="_blank">Putra Pelangi Ticketing</a>
             </p>
-            <div class="row mt-4">
-                <!-- FAQ -->
-                <div class="col-md-6 mb-4" data-aos="fade-left" data-aos-duration="1500">
-                    <h5 class="text-danger fw-bold">Pertanyaan Umum</h5>
-                    <ul class="list-group small text-start mx-auto" style="max-width: 400px;">
-                        <li class="list-group-item border-0 ps-0">
-                            <strong>Bagaimana cara mendaftar?</strong>
-                            <p class="text-muted mb-1">Klik tombol "Daftar" di pojok kanan atas, lalu isi informasi yang
-                                diperlukan.</p>
-                        </li>
-                        <li class="list-group-item border-0 ps-0">
-                            <strong>Bagaimana cara memesan tiket?</strong>
-                            <p class="text-muted mb-1">Pilih rute perjalanan Anda di bagian pencarian, lalu ikuti
-                                langkah pembayaran.</p>
-                        </li>
-                        <li class="list-group-item border-0 ps-0">
-                            <strong>Apa kebijakan pengembalian dana?</strong>
-                            <p class="text-muted mb-1">Pengembalian dana maksimal 24 jam sebelum keberangkatan dengan
-                                syarat dan ketentuan berlaku.</p>
-                        </li>
-                        <li class="list-group-item border-0 ps-0">
-                            <strong>Apakah data saya aman?</strong>
-                            <p class="text-muted mb-1">Kami menggunakan enkripsi tingkat tinggi untuk melindungi data
-                                Anda.</p>
-                        </li>
-                    </ul>
-                </div>
-                <!-- Kontak -->
-                <div class="col-md-6" data-aos="fade-right" data-aos-duration="1500">
-                    <h5 class="text-danger fw-bold">Hubungi Kami</h5>
-                    <p class="text-muted small">Untuk pertanyaan lebih lanjut, silakan isi formulir di bawah ini:</p>
-                    <form action="/submit-form" method="POST" class="text-start mx-auto" style="max-width: 400px;">
-                        <div class="mb-3">
-                            <label for="name" class="form-label small fw-bold">Nama Anda</label>
-                            <input type="text" class="form-control" id="name" name="name"
-                                placeholder="Masukkan nama Anda" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label small fw-bold">Email</label>
-                            <input type="email" class="form-control" id="email" name="email"
-                                placeholder="Masukkan email Anda" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label small fw-bold">Pesan</label>
-                            <textarea class="form-control" id="message" name="message" rows="4"
-                                placeholder="Tulis pesan Anda di sini" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-danger rounded-0 w-100" data-aos-duration="1500">Kirim
-                            Pesan</button>
-                    </form>
-                </div>
-            </div>
+          </div>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-white"
+              ><i class="fab fa-twitter fs-4 text-dark"></i
+            ></a>
+            <a href="#" class="text-white"
+              ><i class="fab fa-linkedin fs-4 text-dark"></i
+            ></a>
+          </div>
         </div>
-    </section>
-
-
-
-    <footer class="footer" style="background-color: #f3f6fa;">
-        <div class="container pt-5">
-            <div class="row">
-                <!-- Informasi Perusahaan -->
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="footer__about">
-                        <div class="footer__about__logo">
-                            <h2 class="fw-bold">Putra Pelangi Ticketing</h2>
-                        </div>
-                        <ul class="list-unstyled fw-light d-flex gap-2 flex-column pt-2">
-                            <li>Alamat: Jl. Mawar No.60, Jakarta</li>
-                            <li>Telepon: +62 811-1234-5678</li>
-                            <li>Email: info@putrapelangi.com</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Tautan Berguna -->
-                <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
-                    <div class="footer__widget">
-                        <h6 class="fw-bold">Tautan Berguna</h6>
-                        <div class="d-flex gap-5 pt-2">
-                            <ul class="list-unstyled fw-light d-flex flex-column gap-2">
-                                <li><a href="#" class="nav-link">Tentang Kami</a></li>
-                                <li><a href="#" class="nav-link">Layanan Kami</a></li>
-                                <li><a href="#" class="nav-link">Keamanan Pembayaran</a></li>
-                                <li><a href="#" class="nav-link">Informasi Pengiriman</a></li>
-                                <li><a href="#" class="nav-link">Kebijakan Privasi</a></li>
-                                <li><a href="#" class="nav-link">Peta Situs</a></li>
-                            </ul>
-                            <ul class="list-unstyled fw-light d-flex flex-column gap-2">
-                                <li><a href="#" class="nav-link">Siapa Kami</a></li>
-                                <li><a href="#" class="nav-link">Proyek Kami</a></li>
-                                <li><a href="#" class="nav-link">Kontak</a></li>
-                                <li><a href="#" class="nav-link">Inovasi</a></li>
-                                <li><a href="#" class="nav-link">Testimoni</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Newsletter -->
-                <div class="col-lg-4 col-md-12">
-                    <div class="footer__widget">
-                        <h6 class="fw-bold">Berlangganan Newsletter Kami</h6>
-                        <p class="text-dark fw-light pt-2">Dapatkan informasi terbaru tentang layanan kami dan penawaran
-                            spesial langsung di email Anda.</p>
-                        <div class="input-group input-group-sm mb-1">
-                            <input type="text" class="form-control rounded rounded-0" placeholder="Masukkan email Anda"
-                                aria-label="" aria-describedby="basic-addon1">
-                            <span class="input-group-text bg-dark px-3 fw-bold text-light rounded-0"
-                                id="basic-addon1">BERLANGGANAN</span>
-                        </div>
-                        <div class="footer__widget__social pt-4 d-flex gap-3">
-                            <a href="#" class="text-dark"><i class="fab fs-5 border fa-facebook"></i></a>
-                            <a href="#" class="text-dark"><i class="fab fs-5 border fa-instagram"></i></a>
-                            <a href="#" class="text-dark"><i class="fab fs-5 border fa-twitter"></i></a>
-                            <a href="#" class="text-dark"><i class="fab fs-5 border fa-pinterest"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Copyright -->
-            <div class="footer__copyright d-flex justify-content-between align-items-center border-top py-2 mt-3">
-                <div class="footer__copyright__text">
-                    <p class="m-0 fw-light" style="font-size: 13px;">
-                        Copyright ©
-                        <script>document.write(new Date().getFullYear());</script> Semua hak dilindungi |
-                        Website ini dibuat dengan <i class="fa fa-heart" aria-hidden="true"></i> oleh <a
-                            href="index.html" target="_blank">Putra Pelangi Ticketing</a>
-                    </p>
-                </div>
-                <div class="d-flex gap-3">
-                    <a href="#" class="text-white"><i class="fab fa-twitter fs-4 text-dark"></i></a>
-                    <a href="#" class="text-white"><i class="fab fa-linkedin fs-4 text-dark"></i></a>
-                </div>
-            </div>
-        </div>
+      </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
     <script>
-        // Initialize AOS
-        AOS.init({
-            duration: 1000, // Durasi animasi
-            once: true,     // Animasi hanya sekali saat scroll
-        });
-    </script>
-</body>
+      // Initialize AOS
+      AOS.init({
+        duration: 1000, // Durasi animasi
+        once: true, // Animasi hanya sekali saat scroll
+      });
 
+      document.addEventListener("DOMContentLoaded", function () {
+        const dari = document.getElementById("dari");
+        const ke = document.getElementById("ke");
+        const tanggalPergi = document.getElementById("tanggal-pergi");
+        const cariBusBtn = document.getElementById("cariBus");
+
+        function validateForm() {
+          if (dari.value && ke.value && tanggalPergi.value) {
+            cariBusBtn.removeAttribute("disabled");
+          } else {
+            cariBusBtn.setAttribute("disabled", "true");
+          }
+        }
+
+        dari.addEventListener("change", validateForm);
+        ke.addEventListener("change", validateForm);
+        tanggalPergi.addEventListener("input", validateForm);
+
+        validateForm(); // Pastikan tombol awalnya dinonaktifkan
+      });
+    </script>
+  </body>
 </html>
