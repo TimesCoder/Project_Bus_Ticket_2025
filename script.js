@@ -259,3 +259,49 @@ function addOrder() {
   window.location.href = "detail-penumpang.html";
 }
 
+// Fungsi Register (Simpan ke localStorage)
+function handleRegister(event) {
+  event.preventDefault();
+  const email = document.getElementById('register-email').value;
+  const password = document.getElementById('register-password').value;
+  const confirmPassword = document.getElementById('confirm-password').value;
+
+  if (password !== confirmPassword) {
+    alert('Password dan konfirmasi password tidak cocok!');
+    return;
+  }
+
+  // Cek apakah email sudah terdaftar
+  if (localStorage.getItem(email)) {
+    alert('Email sudah terdaftar! Silakan login.');
+    showLogin();
+    return;
+  }
+
+  // Simpan user ke localStorage
+  localStorage.setItem(email, JSON.stringify({ password }));
+  alert('Registrasi berhasil! Silakan login.');
+  showLogin();
+}
+
+// Fungsi Login (Cek dari localStorage)
+function handleLogin(event) {
+  event.preventDefault();
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+
+  // Cek apakah user sudah terdaftar
+  const userData = localStorage.getItem(email);
+  if (!userData) {
+    alert('Akun tidak ditemukan! Silakan register terlebih dahulu.');
+    return;
+  }
+
+  const { password: savedPassword } = JSON.parse(userData);
+  if (password === savedPassword) {
+    alert('Login berhasil!');
+    hideModal();
+  } else {
+    alert('Password salah!');
+  }
+}
