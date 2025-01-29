@@ -1,512 +1,398 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="auto">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PUTRA PELANGI TICKETING</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/css/bootstrap.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
-      rel="stylesheet"
-    />
-    <link type="text/css" href="style.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body>
-    <div id="popup" class="modal overflow-hidden" style="z-index: 999999999">
-      <div class="modal-content container rounded-0 overflow-hidden">
-        <span id="close" class="close" onclick="hideModal()">&times;</span>
-        <!-- Login Form -->
-        <div id="loginForm">
-          <h2 class="text-center text-dark fw-bold mb-4">Login</h2>
-          <form class="login-form">
-            <div class="mb-3">
-              <label for="email" class="form-label">Email address</label>
-              <input
-                type="email"
-                class="form-control"
-                id="email"
-                placeholder="example@gmail.com"
-              />
-            </div>
-            <div class="mb-3">
-              <label for="password" class="form-label">Password</label>
-              <input
-                type="password"
-                class="form-control"
-                id="password"
-                placeholder="Enter your password"
-              />
-            </div>
-            <div class="d-flex justify-content-between align-items-center mb-3">
-              <div>
-                <input type="checkbox" id="remember-me" />
-                <label for="remember-me" class="form-check-label"
-                  >Remember me</label
-                >
-              </div>
-              <a href="#" class="text-decoration-none text-danger"
-                >Forgot Password?</a
-              >
-            </div>
-            <div class="d-grid gap-2 mb-3">
-              <button
-                class="btn btn-outline-dark rounded-0 d-flex align-items-center justify-content-center"
-              >
-                <a href="#" class="text-decoration-none text-dark"
-                  ><i class="fab fa-google"></i> Login With Google</a
-                >
-              </button>
-            </div>
-            <button type="submit" class="btn btn-dark w-100 rounded-0">
-              Login
-            </button>
-          </form>
-          <p class="text-center mt-3">
-            Belum punya akun?
-            <span class="switch-btn text-danger" onclick="showRegister()"
-              >Register</span
-            >
-          </p>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PUTRA PELANGI TICKETING</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/css/bootstrap.min.css" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
+    rel="stylesheet" />
+  <link type="text/css" href="style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
 
-        <!-- Register Form -->
-        <div id="registerForm" class="swipe-container" style="display: none">
-          <h2 class="text-center text-dark fw-bold mb-4">Register</h2>
-          <form class="register-form">
-            <div class="mb-3">
-              <label for="register-email" class="form-label"
-                >Email address</label
-              >
-              <input
-                type="email"
-                class="form-control"
-                id="register-email"
-                placeholder="example@gmail.com"
-              />
+<body>
+  <div id="popup" class="modal overflow-hidden" style="z-index: 999999999">
+    <div class="modal-content container rounded-0 overflow-hidden">
+      <span id="close" class="close" onclick="hideModal()">&times;</span>
+      <!-- Login Form -->
+      <div id="loginForm">
+        <h2 class="text-center text-dark fw-bold mb-4">Login</h2>
+        <form class="login-form">
+          <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="example@gmail.com" />
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Enter your password" />
+          </div>
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <div>
+              <input type="checkbox" id="remember-me" />
+              <label for="remember-me" class="form-check-label">Remember me</label>
             </div>
-            <div class="mb-3">
-              <label for="register-password" class="form-label">Password</label>
-              <input
-                type="password"
-                class="form-control"
-                id="register-password"
-                placeholder="Enter your password"
-              />
-            </div>
-            <div class="mb-3">
-              <label for="confirm-password" class="form-label"
-                >Confirm Password</label
-              >
-              <input
-                type="password"
-                class="form-control"
-                id="confirm-password"
-                placeholder="Confirm your password"
-              />
-            </div>
-            <button type="submit" class="btn btn-dark w-100 rounded-0">
-              Register
+            <a href="#" class="text-decoration-none text-danger">Forgot Password?</a>
+          </div>
+          <div class="d-grid gap-2 mb-3">
+            <button class="btn btn-outline-dark rounded-0 d-flex align-items-center justify-content-center">
+              <a href="#" class="text-decoration-none text-dark"><i class="fab fa-google"></i> Login With Google</a>
             </button>
-          </form>
-          <p class="text-center mt-3">
-            Sudah punya akun?
-            <span class="switch-btn text-danger" onclick="showLogin()"
-              >Login</span
-            >
-          </p>
-        </div>
+          </div>
+          <button type="submit" class="btn btn-dark w-100 rounded-0">
+            Login
+          </button>
+        </form>
+        <p class="text-center mt-3">
+          Belum punya akun?
+          <span class="switch-btn text-danger" onclick="showRegister()">Register</span>
+        </p>
+      </div>
+
+      <!-- Register Form -->
+      <div id="registerForm" class="swipe-container" style="display: none">
+        <h2 class="text-center text-dark fw-bold mb-4">Register</h2>
+        <form class="register-form">
+          <div class="mb-3">
+            <label for="register-email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="register-email" placeholder="example@gmail.com" />
+          </div>
+          <div class="mb-3">
+            <label for="register-password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="register-password" placeholder="Enter your password" />
+          </div>
+          <div class="mb-3">
+            <label for="confirm-password" class="form-label">Confirm Password</label>
+            <input type="password" class="form-control" id="confirm-password" placeholder="Confirm your password" />
+          </div>
+          <button type="submit" class="btn btn-dark w-100 rounded-0">
+            Register
+          </button>
+        </form>
+        <p class="text-center mt-3">
+          Sudah punya akun?
+          <span class="switch-btn text-danger" onclick="showLogin()">Login</span>
+        </p>
       </div>
     </div>
+  </div>
 
-    <header
-      class="header"
-      style="
+  <header class="header" style="
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         z-index: 1000;
         background-color: #fff;
-      "
-      data-aos="fade-down"
-    >
-      <div class="top-bar">
-        <div class="container">
-          <div class="d-flex align-items-center justify-content-between">
-            <div class="nav-item d-flex gap-3">
-              <div class="d-flex gap-2 align-items-center">
-                <i class="fa fa-envelope m-0 p-0"></i>
-                <span class="border-end pe-3">hello@colorlib.com</span>
-              </div>
-              <span>Free Shipping for all Order of $99</span>
+      " data-aos="fade-down">
+    <div class="top-bar">
+      <div class="container">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="nav-item d-flex gap-3">
+            <div class="d-flex gap-2 align-items-center">
+              <i class="fa fa-envelope m-0 p-0"></i>
+              <span class="border-end pe-3">hello@colorlib.com</span>
             </div>
+            <span>Free Shipping for all Order of $99</span>
+          </div>
 
-            <div class="d-lang">
-              <span class="dropdown-toggle">English</span>
-              <div
-                class="dropdown-menu menu-dropdown position-absolute bg-dark rounded-0 p-1"
-                aria-labelledby="dropdownMenu2"
-              >
-                <button class="dropdown-item" type="button">Indonesia</button>
-                <button class="dropdown-item" type="button">English</button>
-              </div>
+          <div class="d-lang">
+            <span class="dropdown-toggle">English</span>
+            <div class="dropdown-menu menu-dropdown position-absolute bg-dark rounded-0 p-1"
+              aria-labelledby="dropdownMenu2">
+              <button class="dropdown-item" type="button">Indonesia</button>
+              <button class="dropdown-item" type="button">English</button>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- search -->
+    <!-- search -->
 
-      <div class="header-main py-3">
-        <div class="container">
-          <div class="menu d-flex align-items-center justify-content-between">
-            <div class="brand-prooduct">
-              <a href="index.html" class="nav-link fs-3 fw-bold" id="icon"
-                >PUTRA PELANGI TICKETING</a
-              >
-            </div>
-
-            <div class="header-navbar">
-              <div class="container">
-                <ul
-                  class="navbar navbar-nav flex-row justify-content-start gap-3 p-1"
-                >
-                  <li class="nav-item">
-                    <a class="nav-link" href="index.html">TICKET BUS ONLINE</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="index.html">ABOUT</a>
-                  </li>
-
-                  <li class="nav-item">
-                    <a class="nav-link" href="index.html">BANTUAN</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#" class="nav-link"
-                      ><i class="fa fa-user" onclick="showModal()"></i
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+    <div class="header-main py-3">
+      <div class="container">
+        <div class="menu d-flex align-items-center justify-content-between">
+          <div class="brand-prooduct">
+            <a href="index.html" class="nav-link fs-3 fw-bold" id="icon">PUTRA PELANGI TICKETING</a>
           </div>
-        </div>
-      </div>
-    </header>
-    <section class="container mt-5 pt-5">
-      <div class="d-flex justify-content-end mt-5">
-        <button
-          class="btn btn-danger small-btn"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapseExample"
-          aria-expanded="false"
-          aria-controls="collapseExample"
-        >
-          Refine Search <i class="fa fa-search" aria-hidden="true"></i>
-        </button>
-      </div>
-      <div class="collapse mt-3" id="collapseExample">
-        <div class="card card-body">
-          <div class="content-box">
+
+          <div class="header-navbar">
             <div class="container">
-              <div class="row g-3 align-items-center justify-content-center">
-                <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
-                  <div class="input-group">
-                    <span class="input-group-text bg-light text-danger rounded-0">
-                      <i class="fas fa-city"></i>
-                    </span>
-                    <div class="form-floating">
-                      <select id="dari" class="form-control rounded-0">
-                        <option value="">Pilih Kota Asal</option>
-                        <option value="Medan">Medan</option>
-                        <option value="B.Aceh">Banda Aceh</option>
-                        <option value="Pekanbaru">Pekanbaru</option>
-                        <option value="Lhokseumawe">Lhokseumawe</option>
-                        <option value="Krueng Geukueh">Krueng Geukueh</option>
-                        <option value="Bireuen">Bireuen</option>
-                        <option value="Sigli">Sigli</option>
-                        <option value="Takengon">Takengon</option>
-                        <option value="B.Batu">Batu Bara</option>
-                        <option value="Pk. Kerinci">Pangkalan Kerinci</option>
-                        <option value="Jambi">Jambi</option>
-                        <option value="Palembang">Palembang</option>
-                        <option value="Lampung">Lampung</option>
-                        <option value="Jakarta">Jakarta</option>
-                        <option value="Bogor">Bogor</option>
-                        <option value="Bandung">Bandung</option>
-                      </select>
-                      <label for="dari">Dari</label>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
-                  <div class="input-group">
-                    <span class="input-group-text bg-light text-danger rounded-0">
-                      <i class="fas fa-city"></i>
-                    </span>
-                    <div class="form-floating">
-                      <select id="ke" class="form-control rounded-0">
-                        <option value="">Pilih Kota Tujuan</option>
-                        <option value="Medan">Medan</option>
-                        <option value="B.Aceh">Banda Aceh</option>
-                        <option value="Pekanbaru">Pekanbaru</option>
-                        <option value="Lhokseumawe">Lhokseumawe</option>
-                        <option value="Krueng Geukueh">Krueng Geukueh</option>
-                        <option value="Bireuen">Bireuen</option>
-                        <option value="Sigli">Sigli</option>
-                        <option value="Takengon">Takengon</option>
-                        <option value="B.Batu">Batu Bara</option>
-                        <option value="Pk. Kerinci">Pangkalan Kerinci</option>
-                        <option value="Jambi">Jambi</option>
-                        <option value="Palembang">Palembang</option>
-                        <option value="Lampung">Lampung</option>
-                        <option value="Jakarta">Jakarta</option>
-                        <option value="Bogor">Bogor</option>
-                        <option value="Bandung">Bandung</option>
-                      </select>
-                      <label for="ke">Ke</label>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
-                  <div class="input-group">
-                    <span class="input-group-text bg-light text-danger rounded-0">
-                      <i class="fas fa-calendar-alt"></i>
-                    </span>
-                    <div class="form-floating">
-                      <input
-                        type="date"
-                        id="tanggal-pergi"
-                        class="form-control rounded-0"
-                      />
-                      <label for="tanggal-pergi">Tanggal Pergi</label>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
-                  <div class="input-group">
-                    <span class="input-group-text bg-light text-danger rounded-0">
-                      <i class="fas fa-calendar-alt"></i>
-                    </span>
-                    <div class="form-floating">
-                      <input
-                        type="date"
-                        id="tanggal-pulang"
-                        class="form-control rounded-0"
-                      />
-                      <label for="tanggal-pulang">Tanggal Pulang</label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row mt-3 justify-content-center">
-                <div
-                  class="col-md-3 text-center"
-                  data-aos="zoom-in"
-                  data-aos-delay="500"
-                >
-                  <button id="cariBus" class="btn btn-danger w-100 rounded-0">
-                    <i class="fas fa-search"></i>
-                    <a
-                      href="pencarian_bus.html"
-                      class="text-decoration-none text-white"
-                      >Cari Bus</a
-                    >
-                  </button>
-                </div>
-              </div>
-        </div>
-      </div>
-    </section>
+              <ul class="navbar navbar-nav flex-row justify-content-start gap-3 p-1">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">TICKET BUS ONLINE</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">ABOUT</a>
+                </li>
 
-    <!-- Tampilan Hasil -->
-    <section class="container mt-3">
-      <div class="d-flex justify-content-between align-items-center">
-        <div class="col-md-5">
-          <div class="card shadow-lg border-0 rounded-4 p-4">
-            <div class="d-flex align-items-center gap-3">
-              <i class="bi bi-airplane-fill fs-2 text-primary"></i>
-              <div>
-                <p class="fw-bold fs-4 text-uppercase mb-1">Depart</p>
-                <p class="fs-5 mb-1">Medan → Aceh</p>
-                <small class="text-muted">🗓 2025-01-27</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-5">
-          <div class="card shadow-lg border-0 rounded-4 p-4">
-            <div class="d-flex align-items-center gap-3">
-              <i class="bi bi-arrow-return-left fs-2 text-danger"></i>
-              <div>
-                <p class="fw-bold fs-4 text-uppercase mb-1">Return</p>
-                <p class="fs-5 mb-1">Aceh → Medan</p>
-                <small class="text-muted">🗓 2025-02-03</small>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="container mt-3">
-      <div
-        class="w-100 mt-4 d-flex align-items-center justify-content-center gap-2 date-selector p-2  shadow-sm bg-light"
-      >
-        <button
-          type="button"
-          class="btn btn-outline-secondary px-3"
-          id="prevBtn"
-          disabled
-        >
-          <i class="fa fa-arrow-circle-left text-dark"></i>
-        </button>
-
-        <div id="dateButtons" class="d-flex flex-grow-1 gap-2"></div>
-
-        <button
-          type="button"
-          class="btn btn-outline-secondary px-3"
-          id="nextBtn"
-        >
-          <i class="fa fa-arrow-circle-right text-dark"></i>
-        </button>
-      </div>
-    </section>
-
-    <!-- List Bus -->
-    <section class="container mt-4 bus-list" id="busList">
-      <div id="busListItems"></div>
-    </section>
-
-    <footer class="footer" style="background-color: #f3f6fa">
-      <div class="container pt-5">
-        <div class="row">
-          <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="footer__about">
-              <div class="footer__about__logo">
-                <h2 class="fw-bold">Putra pelangi ticketing</h2>
-              </div>
-              <ul class="list-unstyled fw-light d-flex gap-2 flex-column pt-2">
-                <li>Address: 60-49 Road 11378 New York</li>
-                <li>Phone: +65 11.188.888</li>
-                <li>Email: hello@colorlib.com</li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">BANTUAN</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link"><i class="fa fa-user" onclick="showModal()"></i></a>
+                </li>
               </ul>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
-            <div class="footer__widget">
-              <h6 class="fw-bold">Useful Links</h6>
-              <div class="d-flex gap-5 pt-2">
-                <ul class="list-unstyled fw-light d-flex flex-column gap-2">
-                  <li><a href="#" class="nav-link">About Us</a></li>
-                  <li><a href="#" class="nav-link">About Our Shop</a></li>
-                  <li><a href="#" class="nav-link">Secure Shopping</a></li>
-                  <li><a href="#" class="nav-link">Delivery infomation</a></li>
-                  <li><a href="#" class="nav-link">Privacy Policy</a></li>
-                  <li><a href="#" class="nav-link">Our Sitemap</a></li>
-                </ul>
-                <ul class="list-unstyled fw-light d-flex flex-column gap-2">
-                  <li><a href="#" class="nav-link">Who We Are</a></li>
-                  <li><a href="#" class="nav-link">Our Services</a></li>
-                  <li><a href="#" class="nav-link">Projects</a></li>
-                  <li><a href="#" class="nav-link">Contact</a></li>
-                  <li><a href="#" class="nav-link">Innovation</a></li>
-                  <li><a href="#" class="nav-link">Testimonials</a></li>
-                </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="container mt-5 pt-5">
+    <div class="d-flex justify-content-end mt-5">
+      <button class="btn btn-danger small-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+        aria-expanded="false" aria-controls="collapseExample">
+        Refine Search <i class="fa fa-search" aria-hidden="true"></i>
+      </button>
+    </div>
+    <div class="collapse mt-3" id="collapseExample">
+      <div class="card card-body">
+        <div class="content-box">
+          <div class="container">
+            <div class="row g-3 align-items-center justify-content-center">
+              <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="input-group">
+                  <span class="input-group-text bg-light text-danger rounded-0">
+                    <i class="fas fa-city"></i>
+                  </span>
+                  <div class="form-floating">
+                    <select id="dari" class="form-control rounded-0">
+                      <option value="">Pilih Kota Asal</option>
+                      <option value="Medan">Medan</option>
+                      <option value="B.Aceh">Banda Aceh</option>
+                      <option value="Pekanbaru">Pekanbaru</option>
+                      <option value="Lhokseumawe">Lhokseumawe</option>
+                      <option value="Krueng Geukueh">Krueng Geukueh</option>
+                      <option value="Bireuen">Bireuen</option>
+                      <option value="Sigli">Sigli</option>
+                      <option value="Takengon">Takengon</option>
+                      <option value="B.Batu">Batu Bara</option>
+                      <option value="Pk. Kerinci">Pangkalan Kerinci</option>
+                      <option value="Jambi">Jambi</option>
+                      <option value="Palembang">Palembang</option>
+                      <option value="Lampung">Lampung</option>
+                      <option value="Jakarta">Jakarta</option>
+                      <option value="Bogor">Bogor</option>
+                      <option value="Bandung">Bandung</option>
+                    </select>
+                    <label for="dari">Dari</label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+                <div class="input-group">
+                  <span class="input-group-text bg-light text-danger rounded-0">
+                    <i class="fas fa-city"></i>
+                  </span>
+                  <div class="form-floating">
+                    <select id="ke" class="form-control rounded-0">
+                      <option value="">Pilih Kota Tujuan</option>
+                      <option value="Medan">Medan</option>
+                      <option value="B.Aceh">Banda Aceh</option>
+                      <option value="Pekanbaru">Pekanbaru</option>
+                      <option value="Lhokseumawe">Lhokseumawe</option>
+                      <option value="Krueng Geukueh">Krueng Geukueh</option>
+                      <option value="Bireuen">Bireuen</option>
+                      <option value="Sigli">Sigli</option>
+                      <option value="Takengon">Takengon</option>
+                      <option value="B.Batu">Batu Bara</option>
+                      <option value="Pk. Kerinci">Pangkalan Kerinci</option>
+                      <option value="Jambi">Jambi</option>
+                      <option value="Palembang">Palembang</option>
+                      <option value="Lampung">Lampung</option>
+                      <option value="Jakarta">Jakarta</option>
+                      <option value="Bogor">Bogor</option>
+                      <option value="Bandung">Bandung</option>
+                    </select>
+                    <label for="ke">Ke</label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+                <div class="input-group">
+                  <span class="input-group-text bg-light text-danger rounded-0">
+                    <i class="fas fa-calendar-alt"></i>
+                  </span>
+                  <div class="form-floating">
+                    <input type="date" id="tanggal-pergi" class="form-control rounded-0" />
+                    <label for="tanggal-pergi">Tanggal Pergi</label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
+                <div class="input-group">
+                  <span class="input-group-text bg-light text-danger rounded-0">
+                    <i class="fas fa-calendar-alt"></i>
+                  </span>
+                  <div class="form-floating">
+                    <input type="date" id="tanggal-pulang" class="form-control rounded-0" />
+                    <label for="tanggal-pulang">Tanggal Pulang</label>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-lg-4 col-md-12">
-            <div class="footer__widget">
-              <h6 class="fw-bold">Join Our Newsletter Now</h6>
-              <p class="text-dark fw-light pt-2">
-                Get E-mail updates about our latest shop and special offers.
-              </p>
-              <div class="input-group input-group-sm mb-1">
-                <input
-                  type="text"
-                  class="form-control rounded rounded-0"
-                  placeholder="Enter your mail"
-                  aria-label=""
-                  aria-describedby="basic-addon1"
-                />
-                <span
-                  class="input-group-text bg-dark px-3 fw-bold text-light rounded-0"
-                  id="basic-addon1"
-                  >SUBSCRIBE</span
-                >
-              </div>
-              <div class="footer__widget__social pt-4 d-flex gap-3">
-                <a href="#" class="text-dark"
-                  ><i class="fab fs-5 border fa-facebook"></i
-                ></a>
-                <a href="#" class="text-dark"
-                  ><i class="fab fs-5 border fa-instagram"></i
-                ></a>
-                <a href="#" class="text-dark"
-                  ><i class="fab fs-5 border fa-twitter"></i
-                ></a>
-                <a href="#" class="text-dark"
-                  ><i class="fab fs-5 border fa-pinterest"></i
-                ></a>
+            <div class="row mt-3 justify-content-center">
+              <div class="col-md-3 text-center" data-aos="zoom-in" data-aos-delay="500">
+                <button id="cariBus" class="btn btn-danger w-100 rounded-0">
+                  <i class="fas fa-search"></i>
+                  <a href="pencarian_bus.html" class="text-decoration-none text-white">Cari Bus</a>
+                </button>
               </div>
             </div>
           </div>
         </div>
+  </section>
 
-        <div
-          class="footer__copyright d-flex justify-content-between align-items-center border-top py-2 mt-3"
-        >
-          <div class="footer__copyright__text">
-            <p class="m-0 fw-light" style="font-size: 13px">
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-              Copyright ©
-              <script>
-                document.write(new Date().getFullYear());
-              </script>
-              All rights reserved | This template is made with
-              <i class="fa fa-heart" aria-hidden="true"></i> by
-              <a href="index.html" target="_blank">Putra pelangi ticketing </a>
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            </p>
-          </div>
-          <div class="d-flex gap-3">
-            <a href="#" class="text-white"
-              ><i class="fab fa-twitter fs-4 text-dark"></i
-            ></a>
-            <a href="#" class="text-white"
-              ><i class="fab fa-linkedin fs-4 text-dark"></i
-            ></a>
+  <!-- Tampilan Hasil -->
+  <section class="container mt-3">
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="col-md-5">
+        <div class="card shadow-lg border-0 rounded-4 p-4" data-aos="fade-up">
+          <div class="d-flex align-items-center gap-3">
+            <i class="bi bi-airplane-fill fs-2 text-primary"></i>
+            <div>
+              <p class="fw-bold fs-4 text-uppercase mb-1">Depart</p>
+              <p class="fs-5 mb-1">Medan → Aceh</p>
+              <small class="text-muted">🗓 2025-01-27</small>
+            </div>
           </div>
         </div>
       </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
-    <script>
-      // Initialize AOS
-      AOS.init({
-        duration: 1000, // Durasi animasi
-        once: true, // Animasi hanya sekali saat scroll
-      });
-    </script>
-  </body>
+      <div class="col-md-5">
+        <div class="card shadow-lg border-0 rounded-4 p-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="d-flex align-items-center gap-3">
+            <i class="bi bi-arrow-return-left fs-2 text-danger"></i>
+            <div>
+              <p class="fw-bold fs-4 text-uppercase mb-1">Return</p>
+              <p class="fs-5 mb-1">Aceh → Medan</p>
+              <small class="text-muted">🗓 2025-02-03</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container mt-3">
+    <div class="w-100 mt-4 d-flex align-items-center justify-content-center gap-2 date-selector p-2 shadow-sm bg-light"
+      data-aos="zoom-in">
+      <button type="button" class="btn btn-outline-secondary px-3" id="prevBtn" disabled>
+        <i class="fa fa-arrow-circle-left text-dark"></i>
+      </button>
+
+      <div id="dateButtons" class="d-flex flex-grow-1 gap-2"></div>
+
+      <button type="button" class="btn btn-outline-secondary px-3" id="nextBtn">
+        <i class="fa fa-arrow-circle-right text-dark"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- List Bus -->
+  <section class="container mt-4 bus-list" id="busList">
+    <div id="busListItems" data-aos="fade-up"></div>
+  </section>
+
+
+  <footer class="footer" style="background-color: #f3f6fa">
+    <div class="container pt-5">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="footer__about">
+            <div class="footer__about__logo">
+              <h2 class="fw-bold">Putra pelangi ticketing</h2>
+            </div>
+            <ul class="list-unstyled fw-light d-flex gap-2 flex-column pt-2">
+              <li>Address: 60-49 Road 11378 New York</li>
+              <li>Phone: +65 11.188.888</li>
+              <li>Email: hello@colorlib.com</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
+          <div class="footer__widget">
+            <h6 class="fw-bold">Useful Links</h6>
+            <div class="d-flex gap-5 pt-2">
+              <ul class="list-unstyled fw-light d-flex flex-column gap-2">
+                <li><a href="#" class="nav-link">About Us</a></li>
+                <li><a href="#" class="nav-link">About Our Shop</a></li>
+                <li><a href="#" class="nav-link">Secure Shopping</a></li>
+                <li><a href="#" class="nav-link">Delivery infomation</a></li>
+                <li><a href="#" class="nav-link">Privacy Policy</a></li>
+                <li><a href="#" class="nav-link">Our Sitemap</a></li>
+              </ul>
+              <ul class="list-unstyled fw-light d-flex flex-column gap-2">
+                <li><a href="#" class="nav-link">Who We Are</a></li>
+                <li><a href="#" class="nav-link">Our Services</a></li>
+                <li><a href="#" class="nav-link">Projects</a></li>
+                <li><a href="#" class="nav-link">Contact</a></li>
+                <li><a href="#" class="nav-link">Innovation</a></li>
+                <li><a href="#" class="nav-link">Testimonials</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12">
+          <div class="footer__widget">
+            <h6 class="fw-bold">Join Our Newsletter Now</h6>
+            <p class="text-dark fw-light pt-2">
+              Get E-mail updates about our latest shop and special offers.
+            </p>
+            <div class="input-group input-group-sm mb-1">
+              <input type="text" class="form-control rounded rounded-0" placeholder="Enter your mail" aria-label=""
+                aria-describedby="basic-addon1" />
+              <span class="input-group-text bg-dark px-3 fw-bold text-light rounded-0"
+                id="basic-addon1">SUBSCRIBE</span>
+            </div>
+            <div class="footer__widget__social pt-4 d-flex gap-3">
+              <a href="#" class="text-dark"><i class="fab fs-5 border fa-facebook"></i></a>
+              <a href="#" class="text-dark"><i class="fab fs-5 border fa-instagram"></i></a>
+              <a href="#" class="text-dark"><i class="fab fs-5 border fa-twitter"></i></a>
+              <a href="#" class="text-dark"><i class="fab fs-5 border fa-pinterest"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__copyright d-flex justify-content-between align-items-center border-top py-2 mt-3">
+        <div class="footer__copyright__text">
+          <p class="m-0 fw-light" style="font-size: 13px">
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright ©
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            All rights reserved | This template is made with
+            <i class="fa fa-heart" aria-hidden="true"></i> by
+            <a href="index.html" target="_blank">Putra pelangi ticketing </a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          </p>
+        </div>
+        <div class="d-flex gap-3">
+          <a href="#" class="text-white"><i class="fab fa-twitter fs-4 text-dark"></i></a>
+          <a href="#" class="text-white"><i class="fab fa-linkedin fs-4 text-dark"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 1000, // Durasi animasi
+      once: true, // Animasi hanya sekali saat scroll
+    });
+  </script>
+</body>
+
 </html>
