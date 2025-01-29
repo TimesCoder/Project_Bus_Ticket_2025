@@ -1,0 +1,187 @@
+{
+    "dates": [
+      
+      { "date": "28 Jan, Tue", "month": "2025-01-28" },
+      { "date": "29 Jan, Wed", "month": "2025-01-29" },
+      { "date": "30 Jan, Thu", "month": "2025-01-30" },
+      { "date": "31 Jan, Fri", "month": "2025-01-31" },
+      { "date": "1 Feb, Sat", "month": "2025-02-01" },
+      { "date": "2 Feb, Sun", "month": "2025-02-02" },
+      { "date": "3 Feb, Mon", "month": "2025-02-03" }
+     
+     
+    ],
+    "buses": [
+        {
+          "name": "Eksekutif 2.1",
+          "jenis": "Skania K410 IB",
+          "price": "Rp. 350.000",
+          "image": "./assets/details_gambar/gambar4.jpg",
+          "route": "Medan - Sigli - B.Aceh",
+          "time": "20.30 WIB",
+          "seats": "40 seat",
+          "buttonText": "Pilih Bus"
+        },
+        {
+          "name": "Eksekutif 2.1",
+          "jenis": "Skania K410 IB",
+          "price": "Rp. 410.000",
+          "image": "./assets/details_gambar/gambar4.jpg",
+          "route": "Medan - Pekanbaru",
+          "time": "19.30 WIB",
+          "seats": "35 seat",
+          "buttonText": "Pilih Bus"
+        },
+        {
+          "name": "Executive Tronton Seat 2-2",
+          "jenis": "Scania K410 CB",
+          "price": "Rp. 250.000",
+          "image": "./assets/details_gambar/gambar 6.jpg",
+          "route": "Medan - Lhokseumawe",
+          "time": "08.30 WIB",
+          "seats": "40 seat",
+          "buttonText": "Pilih Bus"
+        },
+        {
+          "name": "Executive Tronton Seat 2-2",
+          "jenis": "Scania K410 CB",
+          "price": "Rp. 260.000",
+          "image": "./assets/details_gambar/gambar 6.jpg",
+          "route": "Medan - Krueng Geukueh",
+          "time": "09.00 WIB",
+          "seats": "40 seat",
+          "buttonText": "Pilih Bus"
+        },
+        {
+          "name": "Executive M<ercedes Benz 0500R 1836",
+          "jenis": "Scania K410 CB",
+          "price": "Rp. 270.000",
+          "image": "./assets/details_gambar/gambar7.jpg",
+          "route": "Medan - Siglie",
+          "time": "23.00 WIB",
+          "seats": "40 seat",
+          "buttonText": "Pilih Bus"
+        },
+        {
+          "name": "Executive Tronton Seat 2-2",
+          "jenis": "Scania K410 CB",
+          "price": "Rp. 285.000",
+          "image": "./assets/details_gambar/gambar 6.jpg",
+          "route": "Medan - Sigli",
+          "time": "23.00 WIB",
+          "seats": "40 seat",
+          "buttonText": "Pilih Bus"
+        },
+        {
+          "name": "Executive M<ercedes Benz 0500R 1836",
+          "jenis": "Scania K410 CB",
+          "price": "Rp. 275.000",
+          "image": "./assets/details_gambar/gambar7.jpg",
+          "route": "Medan - B.Aceh",
+          "time": "23.00 WIB",
+          "seats": "40 seat",
+          "buttonText": "Pilih Bus"
+        },
+        {
+          "name": "Executive Tronton Seat 2-2",
+          "jenis": "Scania K410 CB",
+          "price": "Rp. 290.000",
+          "image": "./assets/details_gambar/gambar 6.jpg",
+          "route": "Medan - B.Aceh",
+          "time": "19.30 WIB",
+          "seats": "40 seat",
+          "buttonText": "Pilih Bus"
+        },
+        {
+          "name": "Executive Tronton Seat 2-2",
+          "jenis": "Scania K410 CB",
+          "price": "Rp. 270.000",
+          "image": "./assets/details_gambar/gambar 6.jpg",
+          "route": "Medan - B.Batu",
+          "time": "15.00 WIB",
+          "seats": "40 seat",
+          "buttonText": "Pilih Bus"
+        },
+        {
+          "name": "Executive Tronton Seat 2-2",
+          "jenis": "Scania K410 CB",
+          "price": "Rp. 310.000",
+          "image": "./assets/details_gambar/gambar 6.jpg",
+          "route": "Medan - Pekanbaru",
+          "time": "19.00 WIB",
+          "seats": "40 seat",
+          "buttonText": "Pilih Bus"
+        },
+        {
+          "name": "Executive Tronton Seat 2-2",
+          "jenis": "Scania K410 CB",
+          "price": "Rp. 350.000",
+          "image": "./assets/details_gambar/gambar 6.jpg",
+          "route": "Medan - Pk. Kerinci",
+          "time": "17.30 WIB",
+          "seats": "40 seat",
+          "buttonText": "Pilih Bus"
+        },
+        {
+          "name": "Executive Tronton Seat 2-2",
+          "jenis": "Scania K410 CB",
+          "price": "Rp. 435.000",
+          "image": "./assets/details_gambar/gambar 6.jpg",
+          "route": "Medan - Jambi",
+          "time": "15.00 WIB",
+          "seats": "40 seat",
+          "buttonText": "Pilih Bus"
+        },
+        {
+          "name": "Executive Tronton Seat 2-2",
+          "jenis": "Scania K410 CB",
+          "price": "Rp. 650.000",
+          "image": "./assets/details_gambar/gambar 6.jpg",
+          "route": "Medan - Palembang",
+          "time": "18.00 WIB",
+          "seats": "40 seat",
+          "buttonText": "Pilih Bus"
+        },
+        {
+          "name": "Executive Tronton Seat 2-2",
+          "jenis": "Scania K410 CB",
+          "price": "Rp. 700.000",
+          "image": "./assets/details_gambar/gambar 6.jpg",
+          "route": "Medan - Lampung",
+          "time": "18.00 WIB",
+          "seats": "40 seat",
+          "buttonText": "Pilih Bus"
+        },
+        {
+          "name": "Executive Tronton Seat 2-2",
+          "jenis": "Scania K410 CB",
+          "price": "Rp. 735.000",
+          "image": "./assets/details_gambar/gambar 6.jpg",
+          "route": "Medan - Jakarta",
+          "time": "20.00 WIB",
+          "seats": "40 seat",
+          "buttonText": "Pilih Bus"
+        },
+        {
+          "name": "Executive Tronton Seat 2-2",
+          "jenis": "Scania K410 CB",
+          "price": "Rp. 750.000",
+          "image": "./assets/details_gambar/gambar 6.jpg",
+          "route": "Medan - Bogor",
+          "time": "20.00 WIB",
+          "seats": "40 seat",
+          "buttonText": "Pilih Bus"
+        },
+        {
+          "name": "Executive Tronton Seat 2-2",
+          "jenis": "Scania K410 CB",
+          "price": "Rp. 800.000",
+          "image": "./assets/details_gambar/gambar 6.jpg",
+          "route": "Medan - Bandung",
+          "time": "20.00 WIB",
+          "seats": "40 seat",
+          "buttonText": "Pilih Bus"
+        }
+      ]
+    }
+    
