@@ -2,108 +2,84 @@
 <html lang="en" data-bs-theme="auto">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PUTRA PELANGI TICKETING</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/css/bootstrap.min.css" />
     <link
         href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
-        rel="stylesheet">
-    <link type="text/css" href="style.css" rel="stylesheet">
+        rel="stylesheet" />
+    <link type="text/css" href="style.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="assets/details_gambar/gambar4.jpg">
-
-    <style>
-        /* Mengubah gaya untuk tampilan biasa */
-        #passenger-form .px-4 {
-            max-height: 280px;
-            overflow-y: scroll;
-        }
-
-        /* Sembunyikan elemen-elemen yang tidak perlu saat mencetak */
-        @media print {
-
-            /* Sembunyikan header, footer, dan elemen lain yang tidak perlu dicetak */
-            body * {
-                visibility: hidden;
-            }
-
-            /* Sembunyikan breadcrumb */
-            .breadcrumb {
-                display: none;
-            }
-
-            #passenger-form .px-4 {
-                max-height: none;
-                overflow: visible;
-                height: auto;
-                /* Agar konten bisa meluas sesuai dengan kebutuhan */
-            }
-
-            /* Menghilangkan style lain yang tidak perlu */
-            #passenger-form {
-                margin: 0;
-                padding: 0;
-            }
-
-            .print-content,
-            .print-content * {
-                visibility: visible;
-                /* Hanya konten yang diberi kelas print-content yang terlihat */
-            }
-
-            .print-content {
-                margin-top: 20px;
-                padding: 10px;
-                width: 100%;
-                page-break-before: always;
-                /* Pastikan setiap halaman baru diawali dengan elemen ini */
-            }
-
-            /* Menghindari overflow dan memastikan konten tidak terpotong */
-            .print-content img {
-                max-width: 100%;
-                /* Membatasi lebar gambar agar tidak overflow */
-                height: auto;
-                margin: 0 auto;
-                display: block;
-            }
-
-            .print-content table {
-                width: 100%;
-                border-collapse: collapse;
-                table-layout: fixed;
-                /* Menghindari kolom yang terlalu lebar */
-            }
-
-            .print-content table th,
-            .print-content table td {
-                padding: 8px;
-                border: 1px solid #ddd;
-                text-align: left;
-                word-wrap: break-word;
-                overflow: hidden;
-            }
-
-            .print-content .qr-code {
-                display: block;
-                margin: 0 auto;
-                text-align: center;
-            }
-
-            .print-content .btn {
-                display: none;
-            }
-        }
-    </style>
-
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="assets/details_gambar/gambar4.jpg" />
 </head>
 
 <body>
-    <header class="header" style="position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background-color: #fff;"
-        data-aos="fade-down">
+    <!-- Modal -->
+    <div id="popup" class="modal overflow-hidden" style="z-index: 999999999;">
+        <div class="modal-content container rounded-0 overflow-hidden">
+            <span id="close" class="close" onclick="hideModal()">&times;</span>
+
+            <!-- Login Form -->
+            <div id="loginForm">
+                <h2 class="text-center text-dark fw-bold mb-4">Login</h2>
+                <form onsubmit="handleLogin(event)">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="example@gmail.com" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter your password"
+                            required>
+                    </div>
+                    <button type="submit" class="btn btn-dark w-100 rounded-0">Login</button>
+                </form>
+                <p class="text-center mt-3">
+                    Belum punya akun?
+                    <span class="switch-btn text-danger" onclick="showRegister()">Register</span>
+                </p>
+            </div>
+
+            <!-- Register Form -->
+            <div id="registerForm" style="display: none;">
+                <h2 class="text-center text-dark fw-bold mb-4">Register</h2>
+                <form onsubmit="handleRegister(event)">
+                    <div class="mb-3">
+                        <label for="register-email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="register-email" placeholder="example@gmail.com"
+                            required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="register-password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="register-password"
+                            placeholder="Enter your password" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="confirm-password" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" id="confirm-password"
+                            placeholder="Confirm your password" required>
+                    </div>
+                    <button type="submit" class="btn btn-dark w-100 rounded-0">Register</button>
+                </form>
+                <p class="text-center mt-3">
+                    Sudah punya akun?
+                    <span class="switch-btn text-danger" onclick="showLogin()">Login</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <header class="header" style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: #fff;
+      " data-aos="fade-down">
         <!-- Top Bar -->
         <div class="top-bar">
             <div class="container">
@@ -141,10 +117,11 @@
                                 <a class="nav-link" href="index.html">TICKET BUS ONLINE</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="index.html">ABOUT</a>
+                                <a class="nav-link" href="#about">ABOUT</a>
                             </li>
+
                             <li class="nav-item">
-                                <a class="nav-link" href="index.html">BANTUAN</a>
+                                <a class="nav-link" href="#bantuan">BANTUAN</a>
                             </li>
                             <li class="nav-item">
                                 <a href="#" onclick="showModal()" class="nav-link"><i class="fa fa-user"></i></a>
@@ -153,6 +130,8 @@
                     </div>
                 </nav>
             </div>
+            </nav>
+        </div>
         </div>
     </header>
 
@@ -175,7 +154,7 @@
                     <div class="px-4">
                         <!-- Header Tiket -->
                         <div class="text-center">
-                            <img src="images/logo.png" alt="Logo Bus" style="max-width: 100px;">
+                            <img src="assets/details_gambar/logo_2.jpg" alt="Logo Bus" style="max-width: 100px;">
                             <h3 class="mt-2"><b>P.T. Putra Pelangi</b></h3>
                             <p class="text-muted">Jl. Sultan Agung Raya KM. 27 No. 24, Bekasi Barat, Bekasi</p>
                             <p><b>Phone: (021) 889-586-31</b></p>

@@ -2,23 +2,82 @@
 <html lang="en" data-bs-theme="auto">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PUTRA PELANGI TICKETING</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/css/bootstrap.min.css" />
   <link
     href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
-    rel="stylesheet">
-  <link type="text/css" href="style.css" rel="stylesheet">
+    rel="stylesheet" />
+  <link type="text/css" href="style.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link rel="icon" type="image/png" href="assets/details_gambar/gambar4.jpg">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="assets/details_gambar/gambar4.jpg" />
 </head>
 
 <body>
-  <header class="header" style="position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background-color: #fff;"
-    data-aos="fade-down">
+  <!-- Modal -->
+  <div id="popup" class="modal overflow-hidden" style="z-index: 999999999;">
+    <div class="modal-content container rounded-0 overflow-hidden">
+      <span id="close" class="close" onclick="hideModal()">&times;</span>
+
+      <!-- Login Form -->
+      <div id="loginForm">
+        <h2 class="text-center text-dark fw-bold mb-4">Login</h2>
+        <form onsubmit="handleLogin(event)">
+          <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="example@gmail.com" required>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+          </div>
+          <button type="submit" class="btn btn-dark w-100 rounded-0">Login</button>
+        </form>
+        <p class="text-center mt-3">
+          Belum punya akun?
+          <span class="switch-btn text-danger" onclick="showRegister()">Register</span>
+        </p>
+      </div>
+
+      <!-- Register Form -->
+      <div id="registerForm" style="display: none;">
+        <h2 class="text-center text-dark fw-bold mb-4">Register</h2>
+        <form onsubmit="handleRegister(event)">
+          <div class="mb-3">
+            <label for="register-email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="register-email" placeholder="example@gmail.com" required>
+          </div>
+          <div class="mb-3">
+            <label for="register-password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="register-password" placeholder="Enter your password"
+              required>
+          </div>
+          <div class="mb-3">
+            <label for="confirm-password" class="form-label">Confirm Password</label>
+            <input type="password" class="form-control" id="confirm-password" placeholder="Confirm your password"
+              required>
+          </div>
+          <button type="submit" class="btn btn-dark w-100 rounded-0">Register</button>
+        </form>
+        <p class="text-center mt-3">
+          Sudah punya akun?
+          <span class="switch-btn text-danger" onclick="showLogin()">Login</span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <header class="header" style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: #fff;
+      " data-aos="fade-down">
     <!-- Top Bar -->
     <div class="top-bar">
       <div class="container">
@@ -56,10 +115,11 @@
                 <a class="nav-link" href="index.html">TICKET BUS ONLINE</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="index.html">ABOUT</a>
+                <a class="nav-link" href="#about">ABOUT</a>
               </li>
+
               <li class="nav-item">
-                <a class="nav-link" href="index.html">BANTUAN</a>
+                <a class="nav-link" href="#bantuan">BANTUAN</a>
               </li>
               <li class="nav-item">
                 <a href="#" onclick="showModal()" class="nav-link"><i class="fa fa-user"></i></a>
@@ -68,6 +128,8 @@
           </div>
         </nav>
       </div>
+      </nav>
+    </div>
     </div>
   </header>
 
@@ -76,21 +138,21 @@
       <!-- Breadcrumb -->
       <nav aria-label="breadcrumb bg-primary" class="mb-2">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none text-dark">Beranda</a>
-            </li>
-            <li class="breadcrumb-item" aria-current="page"><a href="detail-penumpang.html"
-                    class="text-decoration-none text-dark">Detail Penumpang</a></li>
-            <liDetail class="breadcrumb-item active" aria-current="page">Pembayaran</a></li>
+          <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none text-dark">Beranda</a>
+          </li>
+          <li class="breadcrumb-item" aria-current="page"><a href="detail-penumpang.html"
+              class="text-decoration-none text-dark">Detail Penumpang</a></li>
+          <liDetail class="breadcrumb-item active" aria-current="page">Pembayaran</a></li>
         </ol>
-    </nav>
-  
+      </nav>
+
       <h3 class="mb-4" data-aos="fade-up" data-aos-delay="100">Pembayaran</h3>
-  
+
       <!-- Order Summary Card -->
       <div id="order-summary" class="card shadow-sm p-4 mb-4" data-aos="fade-up" data-aos-delay="200">
         <!-- Isi order summary akan dimasukkan melalui JavaScript -->
       </div>
-  
+
       <!-- Pay Button -->
       <div class="text-center">
         <button id="pay-button" class="btn btn-danger btn-lg shadow" data-aos="zoom-in" data-aos-delay="300">
@@ -101,7 +163,7 @@
   </section>
 
 
-  
+
 
 
 
