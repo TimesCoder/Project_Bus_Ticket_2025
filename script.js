@@ -158,31 +158,34 @@ function bookingTicket() {
 // Data Kursi
 const seatsData = [
   {
-    seats: Array.from({ length: 10 }, (_, i) => ({
+    seats: Array.from({ length: 8 }, (_, i) => ({
       number: `A${i + 1}`,
       price: 50000,
-      status: i < 8 ? "available" : "unavailable",
+      status: i < 7 ? "available" : "unavailable" ,
     })),
   },
   {
-    seats: Array.from({ length: 10 }, (_, i) => ({
+    seats: Array.from({ length: 8 }, (_, i) => ({
       number: `B${i + 1}`,
       price: 50000,
-      status: i < 9 ? "available" : "booked",
+      status: i < 5 ? "available" : "booked" ,
     })),
   },
+  // buatlah agar ada jarak antara seat A,B dan C,D
+  { seats: [] },
+
   {
-    seats: Array.from({ length: 10 }, (_, i) => ({
+    seats: Array.from({ length: 8 }, (_, i) => ({
       number: `C${i + 1}`,
       price: 50000,
-      status: i === 9 ? "occupied" : "available",
+      status: i === 4 ? "occupied" : "available" && i === 6 ? "available" : "booked",
     })),
   },
   {
-    seats: Array.from({ length: 9 }, (_, i) => ({
+    seats: Array.from({ length: 8 }, (_, i) => ({
       number: `D${i + 1}`,
       price: 50000,
-      status: "available",
+      status: "available " && i === 4 ? "occupied" : "available",
     })),
   },
 ];
