@@ -16,65 +16,56 @@
 </head>
 
 <body>
-  <div id="popup" class="modal overflow-hidden" style="z-index: 999999999">
-    <div class="modal-content container rounded-0 overflow-hidden">
-      <span id="close" class="close" onclick="hideModal()">&times;</span>
-      <!-- Login Form -->
-      <div id="loginForm">
-        <h2 class="text-center text-dark fw-bold mb-4">Login</h2>
-        <form class="login-form">
-          <div class="mb-3">
-            <label for="email" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="email" placeholder="example@gmail.com" />
-          </div>
-          <div class="mb-3">
-            <label for="password" class="form-label">Password</label>
-            <input type="password" class="form-control" id="password" placeholder="Enter your password" />
-          </div>
-          <div class="d-flex justify-content-between align-items-center mb-3">
-            <div>
-              <input type="checkbox" id="remember-me" />
-              <label for="remember-me" class="form-check-label">Remember me</label>
-            </div>
-            <a href="#" class="text-decoration-none text-danger">Forgot Password?</a>
-          </div>
-          <button type="submit" class="btn btn-dark w-100 rounded-0">
-            Login
-          </button>
-        </form>
-        <p class="text-center mt-3">
-          Belum punya akun?
-          <span class="switch-btn text-danger" onclick="showRegister()">Register</span>
-        </p>
-      </div>
+  <!-- Modal -->
+<div id="popup" class="modal overflow-hidden" style="z-index: 999999999;">
+  <div class="modal-content container rounded-0 overflow-hidden">
+    <span id="close" class="close" onclick="hideModal()">&times;</span>
 
-      <!-- Register Form -->
-      <div id="registerForm" class="swipe-container" style="display: none">
-        <h2 class="text-center text-dark fw-bold mb-4">Register</h2>
-        <form class="register-form">
-          <div class="mb-3">
-            <label for="register-email" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="register-email" placeholder="example@gmail.com" />
-          </div>
-          <div class="mb-3">
-            <label for="register-password" class="form-label">Password</label>
-            <input type="password" class="form-control" id="register-password" placeholder="Enter your password" />
-          </div>
-          <div class="mb-3">
-            <label for="confirm-password" class="form-label">Confirm Password</label>
-            <input type="password" class="form-control" id="confirm-password" placeholder="Confirm your password" />
-          </div>
-          <button type="submit" class="btn btn-dark w-100 rounded-0">
-            Register
-          </button>
-        </form>
-        <p class="text-center mt-3">
-          Sudah punya akun?
-          <span class="switch-btn text-danger" onclick="showLogin()">Login</span>
-        </p>
-      </div>
+    <!-- Login Form -->
+    <div id="loginForm">
+      <h2 class="text-center text-dark fw-bold mb-4">Login</h2>
+      <form onsubmit="handleLogin(event)">
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="email" placeholder="example@gmail.com" required>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+        </div>
+        <button type="submit" class="btn btn-dark w-100 rounded-0">Login</button>
+      </form>
+      <p class="text-center mt-3">
+        Belum punya akun?
+        <span class="switch-btn text-danger" onclick="showRegister()">Register</span>
+      </p>
+    </div>
+
+    <!-- Register Form -->
+    <div id="registerForm" style="display: none;">
+      <h2 class="text-center text-dark fw-bold mb-4">Register</h2>
+      <form onsubmit="handleRegister(event)">
+        <div class="mb-3">
+          <label for="register-email" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="register-email" placeholder="example@gmail.com" required>
+        </div>
+        <div class="mb-3">
+          <label for="register-password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="register-password" placeholder="Enter your password" required>
+        </div>
+        <div class="mb-3">
+          <label for="confirm-password" class="form-label">Confirm Password</label>
+          <input type="password" class="form-control" id="confirm-password" placeholder="Confirm your password" required>
+        </div>
+        <button type="submit" class="btn btn-dark w-100 rounded-0">Register</button>
+      </form>
+      <p class="text-center mt-3">
+        Sudah punya akun?
+        <span class="switch-btn text-danger" onclick="showLogin()">Login</span>
+      </p>
     </div>
   </div>
+</div>
 
   <header class="header" style="
         position: fixed;
