@@ -14,18 +14,100 @@ body {
 
 /* ukuran layar */
 @media (min-width: 1200px) {
+  body {
+    overflow-x: hidden;
+  }
+
   .container {
     max-width: 1170px;
+  }
+
+  .strip-1 {
+    position: relative;
+  }
+  .strip-1::after {
+    content: "";
+    position: absolute;
+    top: 12%;
+    right: -57px;
+    display: block;
+    width: 113px;
+    height: 2px;
+    background-color: transparent;
+    border-top: 2px dashed #777;
+  }
+  
+  .strip-1:last-child::after {
+    content: none;
+  }
+  .strip-2 {
+    position: relative;
+  }
+  .strip-2::after {
+    content: "";
+    position: absolute;
+    top: 27%;
+    right: -233px;
+    transform: translateY(-50%);
+    display: block;
+    width: 275px;
+    height: 2px;
+    background-color: transparent;
+    border-top: 2px dashed #777;
+  }
+  .strip-2:last-child::after {
+    content: none;
   }
 }
 
 @media (min-width: 992px) {
+  body {
+    overflow-x: hidden;
+  }
+
   .navbar-expand-lg .navbar-nav .nav-link {
     padding-left: 0;
   }
 
   .breadcrumb-section .breadcrumb {
     padding-left: 0;
+  }
+
+  .strip-1 {
+    position: relative;
+  }
+  .strip-1::after {
+    content: "";
+    position: absolute;
+    top: 12%;
+    right: -57px;
+    display: block;
+    width: 113px;
+    height: 2px;
+    background-color: transparent;
+    border-top: 2px dashed #777;
+  }
+  
+  .strip-1:last-child::after {
+    content: none;
+  }
+  .strip-2 {
+    position: relative;
+  }
+  .strip-2::after {
+    content: "";
+    position: absolute;
+    top: 27%;
+    right: -233px;
+    transform: translateY(-50%);
+    display: block;
+    width: 275px;
+    height: 2px;
+    background-color: transparent;
+    border-top: 2px dashed #777;
+  }
+  .strip-2:last-child::after {
+    content: none;
   }
 }
 
@@ -91,9 +173,12 @@ body {
   height: 3px;
   background-color: #3d55df;
 }
+
 .small-btn {
-  font-size: 12px; /* Ukuran font lebih kecil */
-  padding: 5px 10px; /* Mengurangi padding */
+  font-size: 12px;
+  /* Ukuran font lebih kecil */
+  padding: 5px 10px;
+  /* Mengurangi padding */
 }
 
 
@@ -321,72 +406,7 @@ FOOTER
   ;
 }
 
-.strip-1 {
-  position: relative;
-}
 
-.strip-1::after {
-  content: "";
-  position: absolute;
-  top: 12%;
-  right: -57px;
-  /* Sesuaikan nilai ini agar jarak garis sesuai */
-  transform: translateY(-50%);
-  display: block;
-  width: 113px;
-  /* Panjang garis */
-  height: 2px;
-  /* Ketebalan garis */
-  background-color: #777;
-  /* Mengubah warna garis menjadi abu-abu */
-}
-
-.strip-1:last-child::after {
-  content: none;
-  /* Hilangkan garis pada elemen terakhir */
-}
-
-.strip-1 i {
-  color: #df3d3d;
-}
-
-.strip-2 {
-  position: relative;
-}
-
-.strip-2::after {
-  content: "";
-  position: absolute;
-  top: 27%;
-  right: -233px;
-  /* Sesuaikan nilai ini agar jarak garis sesuai */
-  transform: translateY(-50%);
-  display: block;
-  width: 275px;
-  /* Panjang garis */
-  height: 2px;
-  /* Ketebalan garis */
-  background-color: #777;
-  /* Mengubah warna garis menjadi abu-abu */
-}
-
-.strip-2:last-child::after {
-  content: none;
-  /* Hilangkan garis pada elemen terakhir */
-}
-
-.strip-2 p {
-  font-size: 14px;
-  /* Ukuran font waktu yang lebih kecil */
-  color: #333;
-  /* Warna teks waktu */
-  margin: 5px 0;
-  /* Jarak antara waktu dan elemen lain */
-}
-
-.strip-2 i {
-  color: #df3d3d;
-}
 
 
 
@@ -436,14 +456,15 @@ FOOTER
 
 
 
-.popup-details-kursi{
-  display: flex;
+.popup-details-kursi {
+  display: none;
   justify-content: center;
   align-items: center;
 }
 
 .fa-chair.selected {
-  color: #0d6efd; /* Warna biru untuk kursi yang dipilih */
+  color: #0d6efd;
+  /* Warna biru untuk kursi yang dipilih */
 }
 
 /* Pencarian bus */
@@ -521,4 +542,47 @@ FOOTER
 
 .bus-select button:hover {
   background: #c9302c;
+}
+
+
+.ringkasan .location-1 {
+  position: relative;
+  padding-left: 20px;
+}
+
+.ringkasan .location-1::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 1px;
+  width: 8px;
+  height: 8px;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.ringkasan .location-1::after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 18px;
+  width: 2px;
+  height: calc(100% - 5px);
+  border-left: 2px dotted #ccc;
+}
+
+.ringkasan .location-2 {
+  position: relative;
+  padding-left: 20px;
+}
+
+.ringkasan .location-2::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 1px;
+  width: 8px;
+  height: 8px;
+  background-color: #000;
+  border-radius: 50%;
 }

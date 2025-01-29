@@ -63,10 +63,10 @@ fetch("data.json")
 
         data.buses.forEach((bus) => {
           const busCard = document.createElement("div");
-          busCard.classList.add("bus-card", "d-flex", "justify-content-between");
+          busCard.classList.add("bus-card", "d-flex", "justify-content-between", "rounded-0");
 
           busCard.innerHTML = `
-            <div class="bus-container text-center">
+            <div class="bus-container rounded-0 text-center">
                 <div class="bus-image-container">
                     <img src="${bus.image}" class="bus-logo" alt="${bus.jenis}">
                     <p class="bus-jenis mt-3">${bus.jenis}</p> 
@@ -99,8 +99,8 @@ fetch("data.json")
     function setActiveButton(selectedButton) {
       document
         .querySelectorAll(".date-selector .btn")
-        .forEach((btn) => btn.classList.remove("btn-primary", "active"));
-      selectedButton.classList.add("btn-primary", "active");
+        .forEach((btn) => btn.classList.remove("btn-danger", "active"));
+      selectedButton.classList.add("btn-danger", "active");
     }
 
     // Membuat tombol tanggal berdasarkan data JSON
@@ -116,7 +116,7 @@ fetch("data.json")
         button.classList.add("disabled");
         button.setAttribute("disabled", "true");
       } else {
-        button.classList.add("btn-outline-primary");
+        button.classList.add("btn-outline-danger");
         if (!firstAvailableDate) {
           firstAvailableDate = button; // Simpan tombol pertama yang tersedia
         }
@@ -132,7 +132,7 @@ fetch("data.json")
 
     // Pilih tanggal pertama yang tersedia secara otomatis
     if (firstAvailableDate) {
-      firstAvailableDate.classList.add("btn-primary", "active");
+      firstAvailableDate.classList.add("btn-danger", "active");
       updateBusList();
     }
   })
