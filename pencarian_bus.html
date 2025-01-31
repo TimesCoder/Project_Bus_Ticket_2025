@@ -381,6 +381,27 @@
       duration: 1000, // Durasi animasi
       once: true, // Animasi hanya sekali saat scroll
     });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const dari = document.getElementById("dari");
+      const ke = document.getElementById("ke");
+      const tanggalPergi = document.getElementById("tanggal-pergi");
+      const cariBusBtn = document.getElementById("cariBus");
+
+      function validateForm() {
+        if (dari.value && ke.value && tanggalPergi.value) {
+          cariBusBtn.removeAttribute("disabled");
+        } else {
+          cariBusBtn.setAttribute("disabled", "true");
+        }
+      }
+
+      dari.addEventListener("change", validateForm);
+      ke.addEventListener("change", validateForm);
+      tanggalPergi.addEventListener("input", validateForm);
+
+      validateForm(); // Pastikan tombol awalnya dinonaktifkan
+    });
   </script>
 </body>
 
