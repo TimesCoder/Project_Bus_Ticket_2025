@@ -104,11 +104,11 @@ fetch("data.json")
     }
 
     // Membuat tombol tanggal berdasarkan data JSON
-    data.dates.forEach((dateData) => {
+    data.dates.slice(0, 8).forEach((dateData) => {
       const dateObject = new Date(dateData.month);
       const button = document.createElement("button");
       button.type = "button";
-      button.className = "btn flex-grow-1";
+      button.className = "btn m-10";
       button.innerText = dateData.date;
 
       // Nonaktifkan tombol jika tanggal sudah lewat
